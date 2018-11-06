@@ -4,4 +4,6 @@ Rails.application.routes.draw do
       resources :visits
   end
 end
+  namespace :api do
+    resources :parks
 end
