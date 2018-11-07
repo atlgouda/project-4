@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'visits/index'
+  get 'parks/index'
+  
   namespace :api do
     resources :users do
       resources :visits
@@ -6,4 +9,5 @@ Rails.application.routes.draw do
 end
   namespace :api do
     resources :parks
+  end
 end
