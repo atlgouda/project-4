@@ -26,6 +26,7 @@ export default class UserPage extends Component {
       })
     return (
       <div>
+          <h1>User Page</h1>
         {userContent}
       </div>
     )
