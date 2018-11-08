@@ -43,7 +43,7 @@ export default class AllParks extends Component {
         <h1>National Parks</h1>
         <Link to='/'>Home Page</Link>
         {parkContent}
-        <Link to='/parks/1'>Go to a Park</Link>
+        {/* <Link to={`/parks/${park.id}`}>Go to a Park</Link> */}
       </div>
     )
   }

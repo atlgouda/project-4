@@ -5,6 +5,7 @@ import './App.css';
 import UserPage from './components/UserPage';
 import User from './components/User';
 import AllParks from './components/AllParks';
+import Park from './components/Park';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route exact path="/" component={UserPage}/>
           <Route exact path="/users/:id" component ={User} />
           <Route exact path='/parks' component = {AllParks} />
+          <Route exact path="/parks/:id" component = {Park} />
           </Switch>
       </Router>
     );
