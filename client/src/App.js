@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './App.css';
 import UserPage from './components/UserPage';
 import User from './components/User';
+import AllParks from './components/AllParks';
 
 class App extends Component {
   render() {
@@ -11,7 +12,8 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={UserPage}/>
-          <Route path="/users/:id" component ={User} />
+          <Route exact path="/users/:id" component ={User} />
+          <Route exact path='/parks' component = {AllParks} />
           </Switch>
       </Router>
     );

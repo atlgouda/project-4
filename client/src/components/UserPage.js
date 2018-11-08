@@ -43,10 +43,11 @@ export default class UserPage extends Component {
       })
     return (
       <div>
-          <h1>User Page</h1>
+          <h1>Select User</h1>
+          <Link to='/parks'>Parks Page</Link>
         {userContent}
-
-                <div>Add A User</div>
+        <br></br>
+                <div>Sign Up!</div>
                 <form onSubmit={this.handleSubmit}>
                     <input className ="enterHere"
                         type='text'
