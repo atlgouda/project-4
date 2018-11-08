@@ -5,18 +5,16 @@ class Park < ApplicationRecord
 
 
 
-    include HTTParty
-    base_uri = 'https://developer.nps.gov/api/v1/parks?&api_key=gMM1UxRZusixLtC3yG4nwWDKPypQvRFD7DUfr8SQ'
-  
-    def query
-        request = HTTParty.get(base_uri).to_json
-        @request_hash = JSON.parse(request)
-    end
+   
+    # def query
+    #     request = HTTParty.get(base_uri).to_json
+    #     @request_hash = JSON.parse(request)
+    # end
 
-    def intialize(user_search_input)
-        @search_format = "q=#{user_search_input.gsub(" ", "%20")}&"
-    end
-    # def self.generate(api_id)
+    # def intialize(user_search_input)
+    #     @search_format = "q=#{user_search_input.gsub(" ", "%20")}&"
+    # end
+    # # def self.generate(api_id)
     #   park = find_by api_id: api_id
     #     return park
 
