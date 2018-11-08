@@ -12,6 +12,7 @@
         "axios": "^0.18.0",
         "react": "^16.6.1",
         "react-router-dom": "^4.3.1",
+        "rest-client": "^0.1.5",
         "styled-components": "^4.0.3"
     }
 }
