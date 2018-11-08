@@ -4,12 +4,29 @@ import axios from 'axios'
 
 export default class UserPage extends Component {
     state = {
-        users: []
+        users: [],
+        newUser: {
+            name: ''
+          }
     }
 
     async componentDidMount() {
         await this.fetchUsers()
     }
+
+    handleChange = (event) => {
+        const newUser = { ...this.state.newUser }
+        newUser[event.target.name] = event.target.value
+        this.setState({newUser})
+      }
+  
+      handleSubmit = async (event) => {
+        event.preventDefault()
+        const response = await axios.post('/api/users', this.state.newUser)
+        const users = [ ...this.state.users]
+        users.push(response.data)
+        this.setState({users})
+      }
     
     fetchUsers = async () => {
         const response = await axios.get('/api/users')
@@ -28,6 +45,18 @@ export default class UserPage extends Component {
       <div>
           <h1>User Page</h1>
         {userContent}
+
+                <div>Add A User</div>
+                <form onSubmit={this.handleSubmit}>
+                    <input className ="enterHere"
+                        type='text'
+                        name='name'
+                        placeholder='enter user name'
+                        value={this.state.newUser.name}
+                        onChange={this.handleChange}
+                    />
+                    <form type='submit' value='add user'></form>
+                </form>
       </div>
     )
   }

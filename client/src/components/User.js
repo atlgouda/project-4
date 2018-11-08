@@ -6,6 +6,9 @@ export default class User extends Component {
     state = {
         user: {},
         visits: [],
+        newUser: {
+          name: ''
+        }
     }
 
     //Check to see if async needed
@@ -15,6 +18,9 @@ export default class User extends Component {
         this.setState({user})
     }
 
+
+
+    
     //Change to fetchUserAndVisitData later
     
     fetchOneUser = async (id) => {
@@ -29,6 +35,7 @@ export default class User extends Component {
       <div>
         <h1>{user.name}</h1>
         <p>From: {user.state}</p>
+
       </div>
     )
   }
