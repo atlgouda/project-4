@@ -52,10 +52,22 @@ export default class UserPage extends Component {
                     <input className ="enterHere"
                         type='text'
                         name='name'
-                        placeholder='enter user name'
+                        placeholder='enter your name'
                         value={this.state.newUser.name}
                         onChange={this.handleChange}
                     />
+                    
+                    <form type='submit' value='add user'></form>
+                </form>
+                <form onSubmit={this.handleSubmit}>
+                    <input className ="enterHere"
+                        type='text'
+                        name='state'
+                        placeholder='enter your state'
+                        value={this.state.newUser.state}
+                        onChange={this.handleChange}
+                    />
+                    
                     <form type='submit' value='add user'></form>
                 </form>
       </div>

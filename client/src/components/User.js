@@ -39,6 +39,7 @@ export default class User extends Component {
 
     return (
       <div>
+        <Link to='/'>Back to Users</Link>
         <h1>{user.name}</h1>
         <p>From: {user.state}</p>
         <button onClick={() => this.handleDelete(user.id)}>Delete User</button>
