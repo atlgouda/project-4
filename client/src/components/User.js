@@ -6,9 +6,6 @@ export default class User extends Component {
     state = {
         user: {},
         visits: [],
-        newUser: {
-          name: ''
-        }
     }
 
     //Check to see if async needed
@@ -17,7 +14,16 @@ export default class User extends Component {
         const user = await this.fetchOneUser(userId)
         this.setState({user})
     }
+    handleDelete = async (userId) => {
+      const deleteResponse = await axios.delete(`/api/users/${userId}`)
+      // const filteredUsers = this.state.user.filter(user => userId !== user.id)
+      // this.setState ({ users: filteredUsers })
+      this.goBack()
+    }
 
+    goBack = () => {
+      window.location.replace(`/`)
+    }
 
 
     
@@ -35,7 +41,7 @@ export default class User extends Component {
       <div>
         <h1>{user.name}</h1>
         <p>From: {user.state}</p>
-
+        <button onClick={() => this.handleDelete(user.id)}>Delete User</button>
       </div>
     )
   }
