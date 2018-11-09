@@ -22,6 +22,7 @@ export default class Park extends Component {
       const park = this.state.park
     return (
       <div>
+          <h1>Hello from Park Page</h1>
         <h1>{park.name}</h1>
       </div>
     )

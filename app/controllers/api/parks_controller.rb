@@ -12,7 +12,10 @@ def index
     # @response = HTTParty.get("https://developer.nps.gov/api/v1/parks?limit=100&api_key=gMM1UxRZusixLtC3yG4nwWDKPypQvRFD7DUfr8SQ").parsed_response
     # respond_to do |format|
     #   format.json{render :json => JSON.parse(@result, :include => { :data => { :only => [:name]}})}
-    @park = Park.find(params[:id])
+    
+     # @park = Park.find(params[:id])
+    
+    @park = HTTParty.get("https://developer.nps.gov/api/v1/parks?parkCode=#{params[:parkCode]}&api_key=gMM1UxRZusixLtC3yG4nwWDKPypQvRFD7DUfr8SQ") 
     render json: @park
 
       end

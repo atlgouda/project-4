@@ -31,7 +31,7 @@ export default class AllParks extends Component {
         const parkContent = this.state.parks.map((park, i) => {
             return (
                 <div key={i}>
-                    <Link to={`/parks/${park.id}`}>{park.fullName}</Link>
+                    <Link to={`/parks?parkCode=${park.parkCode}`}>{park.fullName}</Link>
                     <span>~  Located in: {park.states}</span>
                 </div>
             )
