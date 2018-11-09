@@ -1,6 +1,28 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+import styled from 'styled-components'
+
+
+const Image = styled.img`
+  height: 40vmin;
+  border-radius: 200px;
+`
+const Header = styled.div`
+    background-color: #829B86;
+    min-height: 15vh;
+    padding: 20px;
+    text-align: center;
+    >h1 {
+        color: #414C60;
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+`
+const PageBody = styled.div`
+    background-color: papayawhip;
+    min-height: 85vh;
+`
 
 export default class User extends Component {
     state = {
@@ -39,10 +61,14 @@ export default class User extends Component {
 
     return (
       <div>
+        <Header>
         <Link to='/'>Back to Users</Link>
-        <h1>{user.name}</h1>
-        <p>From: {user.state}</p>
+        <h1>{user.name}</h1></Header>
+        <PageBody>
+        <span>From: {user.state}</span>
+        <Image src="https://i.imgur.com/2qp4xeg.jpg" />
         <button onClick={() => this.handleDelete(user.id)}>Delete User</button>
+        </PageBody>
       </div>
     )
   }

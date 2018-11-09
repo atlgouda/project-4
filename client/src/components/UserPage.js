@@ -1,7 +1,23 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+import styled from 'styled-components'
 
+const Header = styled.div`
+    background-color: #829B86;
+    min-height: 15vh;
+    padding: 20px;
+    text-align: center;
+    >h1 {
+        color: #414C60;
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+`
+const PageBody = styled.div`
+    background-color: papayawhip;
+    min-height: 85vh;
+`
 export default class UserPage extends Component {
     state = {
         users: [],
@@ -43,8 +59,10 @@ export default class UserPage extends Component {
       })
     return (
       <div>
-          <h1>Select User</h1>
+          <Header><h1>Select User</h1></Header>
+          <PageBody>
           <Link to='/parks'>Parks Page</Link>
+          
         {userContent}
         <br></br>
                 <div>Sign Up!</div>
@@ -63,13 +81,26 @@ export default class UserPage extends Component {
                     <input className ="enterHere"
                         type='text'
                         name='state'
-                        placeholder='enter your state'
+                        placeholder='enter your state abbreviation'
                         value={this.state.newUser.state}
                         onChange={this.handleChange}
                     />
                     
                     <form type='submit' value='add user'></form>
                 </form>
+
+                <form onSubmit={this.handleSubmit}>
+                    <input className ="enterHere"
+                        type='text'
+                        name='photo_url'
+                        placeholder='enter your photo url'
+                        value={this.state.newUser.photo_url}
+                        onChange={this.handleChange}
+                    />
+                    
+                    <form type='submit' value='add user'></form>
+                    </form>
+                </PageBody>
       </div>
     )
   }
