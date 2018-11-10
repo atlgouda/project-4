@@ -33,7 +33,7 @@ export default class AllParks extends Component {
         const response = await axios.get('/api/parks')
         this.setState({parks: response.data.data})
     }
-
+ 
     // componentDidMount(){
     //     this.ParkList()
     // }
