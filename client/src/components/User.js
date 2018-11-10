@@ -56,6 +56,19 @@ export default class User extends Component {
         return response.data
     }
 
+    handleChange = (event) => {
+      const user = {...this.state.user}
+      user[event.target.name] = event.target.value
+      this.setState({user})
+    }
+
+    handleUpdate = async (event) => {
+      const userId =  this.props.match.params.id
+      const response = await axios.put(`/api/users/${userId}`, this.state.user)
+      const user = this.state.user
+      this.setState({user})
+    }
+
   render() {
       const user = this.state.user
 
@@ -66,8 +79,33 @@ export default class User extends Component {
         <h1>{user.name}</h1></Header>
         <PageBody>
         <span>From: {user.state}</span>
-        <Image src="https://i.imgur.com/2qp4xeg.jpg" />
-        <button onClick={() => this.handleDelete(user.id)}>Delete User</button>
+        <Image src={user.photo_url} />
+        <h3>Edit User:</h3>
+          <div>
+            <form onSubmit = {this.handleUpdate}>
+            <span>Name: </span><input id="user-name"
+              type = 'text'
+              name = 'name'
+              value = {this.state.user.name}
+              onChange = {this.handleChange} />
+            <br></br><br></br>
+            <span>State Abbreviation: </span><input id="user-state"
+              type = 'text'
+              name = 'state abbreviation'
+              value = {this.state.user.state}
+              onChange = {this.handleChange} /> 
+              <br></br><br></br>
+            <span>Photo URL: </span><input id="user-photo"
+              type = 'text'
+              name = 'photo url'
+              value = {this.state.user.photo_url}
+              onChange = {this.handleChange}
+               />           
+              <br></br><br></br>
+              <input type='submit' value = 'Edit User' onClick={() => {this.goBack()}} />
+            </form>
+          </div>
+          <button onClick={() => this.handleDelete(user.id)}>Delete User</button>
         </PageBody>
       </div>
     )
