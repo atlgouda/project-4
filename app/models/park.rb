@@ -3,6 +3,9 @@ class Park < ApplicationRecord
         dependent: :destroy
     has_many :users, through: :visits
     
+    def to_param 
+        parkCode
+    end
 
 
    

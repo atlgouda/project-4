@@ -8,13 +8,13 @@ export default class Park extends Component {
     }
 
     async componentDidMount() {
-        const parkId = this.props.match.params.id
-        const park = await this.fetchOnePark(parkId)
+        const parkCode = this.props.match.params.id
+        const park = await this.fetchOnePark(parkCode)
         this.setState({park})
     }
 
-    fetchOnePark = async (id) => {
-        const response = await axios.get(`/api/parks/${id}`)
+    fetchOnePark = async (parkCode) => {
+        const response = await axios.get(`/api/parks/${parkCode}`)
         return response.data
     }
 
@@ -24,6 +24,9 @@ export default class Park extends Component {
       <div>
           <h1>Hello from Park Page</h1>
         <h1>{park.name}</h1>
+        <h3>{park.fullName}</h3>
+        <p>State: {park.states}</p>
+        <p>About: {park.description}</p>
       </div>
     )
   }
