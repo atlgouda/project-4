@@ -7,6 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Park.destroy_all
 
+brca = Park.create(
+    name: "Bryce Canyon",
+    states: "UT",
+    parkCode: "brca",
+    fullName: "Bryce Canyon National Park",
+    latLong: "lat:37.58399144, long:-112.1826689",
+    description: "Hoodoos (irregular columns of rock) exist on every continent, but here is the largest concentration found anywhere on Earth. Situated along a high plateau at the top of the Grand Staircase, the park's high elevations include numerous life communities, fantastic dark skies, and geological wonders that defy description.",
+    url: "https://www.nps.gov/brca/index.htm",
+)
+
 fila = Park.create(
     name: "First Ladies",
     states: "OH",

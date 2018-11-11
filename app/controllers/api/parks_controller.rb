@@ -33,7 +33,7 @@ def index
   # #    # @park = Park.find(params[:id])
     
   #   # @park = HTTParty.get("https://developer.nps.gov/api/v1/parks?id=#{params[:id]}&api_key=gMM1UxRZusixLtC3yG4nwWDKPypQvRFD7DUfr8SQ") 
-    @park = Park.where(params[:parkCode]).first
+    @park = Park.where(params[:parkCode])
     render json: @park
 
       end
