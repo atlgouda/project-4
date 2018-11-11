@@ -11,7 +11,7 @@ end
     resources :parks
   end
 
-  namespace :api do
-    resources :parks, param: :parkCode
-  end
+  # namespace :api do
+  #   resources :parks, param: :parkCode
+  # end
 end
