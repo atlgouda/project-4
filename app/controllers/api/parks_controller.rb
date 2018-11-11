@@ -2,6 +2,7 @@ class Api::ParksController < ApplicationController
 
   include HTTParty
 
+
   # attr_accessor :name
 
 # class ParkResty
@@ -29,11 +30,12 @@ def index
   # #   # @response = HTTParty.get("https://developer.nps.gov/api/v1/parks?limit=100&api_key=gMM1UxRZusixLtC3yG4nwWDKPypQvRFD7DUfr8SQ").parsed_response
   # #   # respond_to do |format|
   # #   #   format.json{render :json => JSON.parse(@result, :include => { :data => { :only => [:name]}})}
-    
-  # #    # @park = Park.find(params[:id])
+    # @parkCode = Park.all.select(params[:id])
+    #  @park = Park.find(params[:id])
     
   #   # @park = HTTParty.get("https://developer.nps.gov/api/v1/parks?id=#{params[:id]}&api_key=gMM1UxRZusixLtC3yG4nwWDKPypQvRFD7DUfr8SQ") 
-    @park = Park.where(params[:parkCode])
+    # @park = Park.all.select(params[:parkCode])
+    @park = Park.where(params[:parkCode] === 'fila').first
     render json: @park
 
       end
