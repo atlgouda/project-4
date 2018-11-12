@@ -313,150 +313,230 @@ blue = Park.create(
     # "weatherInfo": "Summer: Temperatures range from low to mid 60's at night to middle to upper 80's during the daytime hours. \n\nWinter: Temperatures average from the mid 20's to the mid 40's. Snowfall amount varies, but averages 5\" per month Dec. - March.\n\nSpring and Fall: temperatures and rainfall variable. Peak fall foliage is usually mid-October.",
     name: "Bluestone"
 )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
-# = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
-# )
+boaf = Park.create(
+    states: "MA",
+    latLong: "lat:42.35908295, long:-71.06764181",
+    description: "Centered on the north slope of Beacon Hill, the African American community of 19th century Boston led the city and the nation in the fight against slavery and injustice. These remarkable men and women, together with their allies, were leaders in Abolition Movement, the Underground Railroad, the Civil War, and the early struggle for equal rights and education.",
+    # "designation": "National Historic Site",
+    parkCode: "boaf",
+    # "id": "87F00684-8E1F-4E12-B463-2B5B929A0C74",
+    # "directionsInfo": "Site administrative offices are located at 15 State Street.  However, Ranger programs begin at either the Robert Gould Shaw Memorial on Beacon Street, or at the Museum of African American History at 46 Joy Street on Beacon Hill.",
+    # "directionsUrl": "http://www.nps.gov/boaf/planyourvisit/directions.htm",
+    fullName: "Boston African American National Historic Site",
+    url: "https://www.nps.gov/boaf/index.htm",
+    # "weatherInfo": "Boston African American National Historic Site is located in downtown Boston which can see extreme cold in the winter months, as well as extreme heat and humidity throughout the summer months.  Walking tours may be cancelled during severe heat and/or weather events.",
+    name: "Boston African American"
+)
+ boha = Park.create(
+    states: "MA",
+    latLong: "lat:42.30905526, long:-70.93941138",
+    description: ". . . where you can walk a Civil War-era fort, visit historic lighthouses, explore tide pools, hike lush trails, camp under the stars, or relax while fishing, picnicking or swimming-all within reach of downtown Boston. Youth programs, visitor services, research, wildlife management, and more are coordinated on the park's 34 islands and peninsulas by the Boston Harbor Islands Partnership.",
+    # "designation": "National Recreation Area",
+    parkCode: "boha",
+    # "id": "65E0DF4A-4082-4B48-93BD-5021987CDD7A",
+    # "directionsInfo": "There are many ways to enjoy Boston Harbor Islands and many ways to get there. For more information on how to get to the park by ferry, car, or private boat, please visit www.bostonharborislands.org.",
+    # "directionsUrl": "http://www.nps.gov/boha/planyourvisit/directions.htm",
+    fullName: "Boston Harbor Islands National Recreation Area",
+    url: "https://www.nps.gov/boha/index.htm",
+    # "weatherInfo": "The Boston Harbor Islands have a humid maritime climate characterized by slightly cooler temperatures than the mainland, so dress in layers. Typical summer conditions feature air temperatures approximately 5-10 degrees cooler than the mainland between 60-80 Fahrenheit, winds of 0-15 knots and waves of 1-3 feet.",
+    name: "Boston Harbor Islands"
+)
+brvb= Park.create(
+    states: "KS",
+    latLong: "lat:39.03787665, long:-95.67614437",
+    description: "The story of Brown v. Board of Education, which ended legal segregation in public schools, is one of hope and courage. When the people agreed to be plaintiffs in the case, they never knew they would change history. The people who make up this story were ordinary people. They were teachers, secretaries, welders, ministers and students who simply wanted to be treated equally.",
+    # "designation": "National Historic Site",
+    parkCode: "brvb",
+    # "id": "E2F59F29-1F3A-43B9-A361-7E74E5FDDEB1",
+    # "directionsInfo": "The site is located in downtown Topeka, Kansas at 1515 SE Monroe Street.",
+    # "directionsUrl": "http://www.nps.gov/brvb/planyourvisit/directions.htm",
+    fullName: "Brown v. Board of Education National Historic Site",
+    url: "https://www.nps.gov/brvb/index.htm",
+    # "weatherInfo": "Kansas has a temperate but continental climate, with great extremes between summer and winter temperatures but few long periods of extreme hot or cold.",
+    name: "Brown v. Board of Education"
+)
+buff = Park.create(
+    states: "AR",
+    latLong: "lat:36.04116481, long:-92.90761584",
+    description: "Established in 1972, Buffalo National River flows freely for 135 miles and is one of the few remaining undammed rivers in the lower 48 states. Once you arrive, prepare to journey from running rapids to quiet pools while surrounded by massive bluffs as you cruise through the Ozark Mountains down to the White River.",
+    # "designation": "National River",
+    parkCode: "buff",
+    # "id": "DBD2FCBF-D0DD-4262-A04E-93090888F0F5",
+    # "directionsInfo": "Buffalo National River is a long, narrow park that is crossed by three main highways. \n\nHighways 7, 43, and 62/65 are the main roads out of Harrison, Arkansas that will take you to the Buffalo River, depending on which part of the park you wish to visit.\n\nGPS systems are not reliable in this area so please call ahead for directions or pick up a map of the area beforehand.",
+    # "directionsUrl": "http://www.nps.gov/buff/planyourvisit/directions.htm",
+    fullName: "Buffalo National River",
+    url: "https://www.nps.gov/buff/index.htm",
+    # "weatherInfo": "Summer in the Ozarks can be very hot and humid. Please check the weather forecast prior to your arrival and plan accordingly. The weather the rest of the year has the potential to be wet and cool or dry and warm. Please pay special attention to river levels and the rain forecast when planning a trip on the river. River levels can rise dramatically in a short period of time so please be aware of conditions.",
+    name: "Buffalo"
+)
+cabr = Park.create(
+    states: "CA",
+    latLong: "lat:32.6722503, long:-117.2415985",
+    description: "Climbing out of his boat and onto shore in 1542, Juan Rodriguez Cabrillo stepped into history as the first European to set foot on what is now the West Coast of the United States. In addition to telling the story of 16th century exploration, the park is home to a wealth of cultural and natural resources. Join us and embark on your own Voyage of Discovery.",
+    # "designation": "National Monument",
+    parkCode: "cabr",
+    # "id": "2DB09FB7-0408-44C9-8083-8F50039BD6DA",
+    # "directionsInfo": "FROM DOWNTOWN SAN DIEGO\n\nTake Harbor Drive past the airport\nTurn left onto Rosecrans Street\nTurn right onto Canon Street\nTurn left onto Catalina Blvd. (also known as Cabrillo Memorial Drive)\nFollow Catalina Blvd. all the way to the end",
+    # "directionsUrl": "http://www.nps.gov/cabr/planyourvisit/directionstocabr.htm",
+    fullName: "Cabrillo National Monument",
+    url: "https://www.nps.gov/cabr/index.htm",
+    # "weatherInfo": "Near Perfection\nAlmost three million county residents can't be wrong: it's the weather. While many areas of the country are hibernating under blankets of snow or sweltering in muggy mid-summer humidity, San Diego's climate is generally sunny and mild year-round.",
+    name: "Cabrillo"
+)
+cane = Park.create(
+    states: "KY",
+    latLong: "",
+    description: "Established as a Union supply depot and hospital during the Civil War, Camp Nelson became a recruitment and training center for African American soldiers, and a refugee camp for their wives and children. Thousands of slaves risked their lives escaping to this site with the hope of securing their freedom and, ultimately, controlling their futures by aiding in the destruction of slavery.",
+    # "designation": "National Monument",
+    parkCode: "cane",
+    # "id": "2FB7A664-0F66-49A3-9460-194F4073BA3F",
+    # "directionsInfo": "Camp Nelson National Monument is located along US 27 about 20 miles south of Lexington, Kentucky, 6 miles south of Nicholasville on US 27, and 7.5 miles southeast of Wilmore along US 1268. The Park entrance is on the original Danville Pike, adjacent to US 27, one mile north of the Camp Nelson National Cemetery.",
+    # "directionsUrl": "http://www.nps.gov/cane/planyourvisit/directions.htm",
+    fullName: "Camp Nelson National Monument",
+    url: "https://www.nps.gov/cane/index.htm",
+    # "weatherInfo": "Kentucky has a moderate climate, characterized by warm, yet moist conditions. Summers are usually warm, and winters cool. Kentucky's weather patterns are influenced by the Gulf of Mexico, especially during summer. Spring and summer are the rainiest seasons, though storms occur year-round. Most storms occur between March and September.",
+    name: "Camp Nelson"
+)
+cari = Park.create(
+    states: "LA",
+    latLong: "lat:31.65408447, long:-93.00131977",
+    description: "The Cane River region is home to a unique culture; the Creoles. Generations of the same families of owners and workers, enslaved and tenant, lived on these lands for over 200 years. The park tells their stories and preserves the cultural landscape of Oakland and Magnolia Plantations, two of the most intact Creole cotton plantations in the United States.",
+    # "designation": "National Historical Park",
+    parkCode: "cari",
+    # "id": "55ABA58B-B19E-4851-BDE1-1C0712B2BE2C",
+    # "directionsInfo": "To reach Oakland Plantation, take I-49 to Exit 127, Flora/Cypress. Head east on LA Highway 120 toward Cypress. Cross over LA Highway 1 onto LA Highway 494. The parking lot and entrance pavilion for Oakland is 4.5 miles east of Highway 1 on the left.\n\nTo reach the grounds of Magnolia Plantation, take I-49 to Exit 119, Derry. Head east on LA Highway 119. Cross over LA Highway 1 and proceed for two miles. The grounds of Magnolia Plantation are on the right.",
+    # "directionsUrl": "https://www.nps.gov/cari/planyourvisit/directions.htm",
+    fullName: "Cane River Creole National Historical Park",
+    url: "https://www.nps.gov/cari/index.htm",
+    # "weatherInfo": "Weather in central Louisiana can be unpredictable. Summers are hot and humid. Winter is relatively mild with measurable snowfall every 5-10 years. Average rainfall is approximately 55-60 inches per year. The area is also subject to severe thunderstorms, hail, damaging winds, and tornadoes. Visitors might want to bring hats, umbrellas, and drink plenty of water. Please check the local weather forecast before planning your visit to the park.",
+    name: "Cane River Creole"
+)
+crha = Park.create(
+    states: "LA",
+    latLong: "lat:31.5982227325439, long:-92.9234390258789",
+    description: "More than 300-years of history are etched into the rural landscape of colonial forts, plantations, churches, cemeteries, and homes that comprise Cane River National Heritage Area. Historically, this region lay at the intersection of the French and Spanish Realms in the New World, with the town of Natchitoches originating as an important 18th century trade center.",
+    # "designation": "National Heritage Area",
+    parkCode: "crha",
+    # "id": "ABEF2BF6-7B0B-4A3C-A0DA-7031A0D6EB82",
+    # "directionsInfo": "Cane River National Heritage Area in northwestern Louisiana is a largely rural, agricultural landscape known for its historic plantations, its distinctive Creole architecture, and its multi-cultural legacy. The central corridor of the heritage area begins just south of Natchitoches, and extends along both sides of Cane River Lake for approximately 35 miles.  The heritage area includes Cane River Creole National Historical Park, seven National Historic Landmarks, three State Historic Sites, and other places.",
+    # "directionsUrl": "http://www.canerivernha.org/",
+    fullName: "Cane River National Heritage Area",
+    url: "https://www.nps.gov/crha/index.htm",
+    # "weatherInfo": "Weather in central Louisiana can be unpredictable. Summers are typically hot and humid, and winters are relatively mild. The area is also subject to severe thunderstorms, hail, damaging winds, and tornadoes. Visitors should be prepared for changing weather conditions.",
+    name: "Cane River"
+)
+cany = Park.create(
+    states: "UT",
+    latLong: "lat:38.24555783, long:-109.8801624",
+    description: "Canyonlands invites you to explore a wilderness of countless canyons and fantastically formed buttes carved by the Colorado River and its tributaries. Rivers divide the park into four districts: Island in the Sky, The Needles, The Maze, and the rivers themselves. These areas share a primitive desert atmosphere, but each offers different opportunities for sightseeing and adventure.",
+    # "designation": "National Park",
+    parkCode: "cany",
+    # "id": "319E07D8-E176-41F8-98A9-1E3F8099D0AB",
+    # "directionsInfo": "Canyonlands National Park is cut into three districts by the Green and Colorado rivers. Island in the Sky district, in the north of the park, is the closest district to Moab, UT. In about 40 minutes, you can reach Island in the Sky via UT 313. The Needles district is in the southeast corner of Canyonlands. The Needles is about an hour's drive from Monticello, UT via UT 211. The Maze district, in the west of the park, is the most remote and challenging. You can reach The Maze via unpaved roads from UT 24.",
+    # "directionsUrl": "http://www.nps.gov/cany/planyourvisit/directions.htm",
+    fullName: "Canyonlands National Park",
+    url: "https://www.nps.gov/cany/index.htm",
+    # "weatherInfo": "Canyonlands is part of the Colorado Plateau, a \"high desert\" region that experiences wide temperature fluctuations, sometimes over 40 degrees in a single day. The temperate (and most popular) seasons are spring (April-May) and fall (mid-September-October), when daytime highs average 60 to 80 F and lows average 30 to 50 F. Summer temperatures often exceed 100 F, making strenuous exercise difficult. Winters are cold, with highs averaging 30 to 50 F, and lows averaging 0 to 20 F.",
+    name: "Canyonlands"
+)
+caco = Park.create(
+    states: "MA",
+    latLong: "lat:41.92381465, long:-70.04319832",
+    description: "The great Outer Beach described by Thoreau in the 1800s is protected within the national seashore. Forty miles of pristine sandy beach, marshes, ponds, and uplands support diverse species. Lighthouses, cultural landscapes, and wild cranberry bogs offer a glimpse of Cape Cod's past and continuing ways of life. Swimming beaches and walking and biking trails beckon today's visitors.",
+    # "designation": "National Seashore",
+    parkCode: "caco",
+    # "id": "DE0A8012-5324-4F5C-98DA-0EE6589FDFB3",
+    # "directionsInfo": "The national seashore is located in eastern Massachusetts and is accessed via Rt. 6. The park is 20 miles east of Hyannis, MA.",
+    # "dir/ectionsUrl": "http://www.nps.gov/caco/planyourvisit/directions.htm",
+    fullName: "Cape Cod National Seashore",
+    url: "https://www.nps.gov/caco/index.htm",
+    # "weatherInfo": "Cape Cod's weather is generally moderated by its proximity to the ocean. Winter is typically cold with some snow. Spring is often rainy. Summer is usually warm and humid. Fall is generally dry and clear.",
+    name: "Cape Cod"
+)
+came = Park.create(
+    states: "VA",
+    latLong: "lat:36.9280548096, long:-76.0083312988",
+    description: "English colonists first landed here in April 1607, erected a wooden cross and gave thanks for a successful crossing to a new land. In 1781, Americans could watch from these same sand dunes the largest naval battle of the Revolutionary War. Our French Allies defeated a British fleet just off this shore to set the stage for General George Washington's victory at Yorktown.",
+    # "designation": "Part of Colonial National Historical Park",
+    parkCode: "came",
+    # "id": "3A2AEA7C-8896-4445-9763-932B4A74CF34",
+    # "directionsInfo": "Located on the south side of the Chesapeake Bay, Cape Henry Memorial sits within the Joint Expeditionary Base Little Creek-Fort Story. From Interstate 64 E take exit 282 to merge onto US-13N/Northhampton Boulevard towards the Chesapeake Bay Bridge. Then take US-60 E/Shore Drive exit toward Beaches, this is the last exit before the Chesapeake Bay Bridge. Follow Shore Drive and turn left onto Atlantic Ave and proceed to Gate 8. Follow Atlantic Ave to Cape Henry Memorial.",
+    # "directionsUrl": "http://www.nps.gov/came/planyourvisit/directions.htm",
+    fullName: "Cape Henry Memorial Part of Colonial National Historical Park",
+    url: "https://www.nps.gov/came/index.htm",
+    # "weatherInfo": "Spring: Temperatures usually range from 40 F to 80 F. Rain is common.\n\nSummer: Temperatures usually range from 80 F to 100 F. Rain and sun are equally common. On very sunny days, be prepared with plenty of water .\n\nFall: Temperatures usually range from 40 F to 70 F.\n\nWinter: Temperatures range from 40 F to 20 F. Be prepared with cold weather gear and numerous layers if you intend to be outside.",
+    name: "Cape Henry Memorial"
+)
+cahi = Park.create(
+    states: "DC",
+    latLong: "lat:38.889993, long:-76.990332",
+    description: "The Capitol Hill Parks include several park areas east of the U.S. Capitol. Included in this group are Folger, Lincoln, Stanton, and Marion Parks, the Eastern Market and Potomac Avenue Metro stations, and several smaller land parcels such as Seward Square, Twining Square, the Maryland Avenue Triangles, the Pennsylvania Avenue Medians, and 59 inner-city triangles and squares.",
+    # "designation": "",
+    parkCode: "cahi",
+    # "id": "96DC2172-0201-4ABB-BD77-2687F4726C9B",
+    # "directionsInfo": "",
+    # "directionsUrl": "http://www.nps.gov/cahi/planyourvisit/directions.htm",
+    fullName: "Capitol Hill Parks",
+    url: "https://www.nps.gov/cahi/index.htm",
+    # "weatherInfo": "Winter: Temperatures usually range from 30 to 50 F. There is occasional snow.\n\nSpring: Temperatures usually range widely from 40 to 70 F. Rain is common.\n\nSummer: Temperatures usually range from 70 to 90 F. Humidity is usually high. Be prepared and drink plenty of water. There is a water fountain in the visitor center.\n\nFall: Temperatures usually range widely from 40 to 70 F. Humidity can remain high in the earlier part of the season.",
+    name: "Capitol Hill Parks"
+)
+carl = Park.create(
+    states: "NC",
+    latLong: "lat:35.26815509, long:-82.45106258",
+    description: "This year marks the 50th anniversary of the park, 1968-2018.\n\nCarl Sandburg provided a popular voice for the American people of the twentieth century and still speaks to us through his words, activism, music and the beauty and serenity of Carl Sandburg Home National Historic Site.\n\nExplore Sandburg's legacy and Experience Your America!",
+    # "designation": "National Historic Site",
+    parkCode: "carl",
+    # "id": "6E9B2F16-4CFE-49B2-A95E-87E4F02E79FF",
+    # "directionsInfo": "The park is located three miles south of Hendersonville, NC on Little River Road off of the Greenville Highway/Rt. 225 in Flat Rock, NC. Visitors using GPS or mapping software should use 1800 Little River Road and look for the signs directing you to the visitor parking lot on Little River Road.",
+    # "directionsUrl": "http://www.nps.gov/carl/planyourvisit/directions.htm",
+    fullName: "Carl Sandburg Home National Historic Site",
+    url: "https://www.nps.gov/carl/index.htm",
+    # "weatherInfo": "Average Monthly Highs and Lows\nJanuary - 45 / 25\nFebruary - 50 / 30\nMarch - 55 / 35\nApril - 60 / 40\t\nMay- 70 / 60\t\nJune - 80 / 65\t\nJuly - 85 / 65\nAugust - 80 / 65\nSeptember - 75 / 55\nOctober - 70 / 45\nNovember - 60 / 35\nDecember - 50 / 30",
+    name: "Carl Sandburg Home"
+)
+cave = Park.create(
+    states: "NM",
+    latLong: "lat:32.14089463, long:-104.5529688",
+    description: "High ancient sea ledges, deep rocky canyons, flowering cactus, and desert wildlife—treasures above the ground in the Chihuahuan Desert. Hidden beneath the surface are more than 119 caves—formed when sulfuric acid dissolved limestone leaving behind caverns of all sizes.",
+    # "designation": "National Park",
+    parkCode: "cave",
+    # "id": "6FDE39B1-AB4A-4C9A-A5CD-4AF67601CD78",
+    # "directionsInfo": "To access the park's only entrance road, New Mexico Highway 7, turn north from US Hwy 62/180 at White's City, NM, which is 20 miles (32 km) southwest of Carlsbad, NM and 145 miles (233 km) northeast of El Paso, TX. The entrance road stretches a scenic seven miles (11.3 km) from the park gate at White's City to the visitor center and cavern entrance. The address for the park's visitor center is 727 Carlsbad Caverns Hwy, Carlsbad, NM, 88220, located 27 miles (43 km) from the town of Carlsbad.",
+    # "directionsUrl": "http://www.nps.gov/cave/planyourvisit/directions.htm",
+    fullName: "Carlsbad Caverns National Park",
+    url: "https://www.nps.gov/cave/index.htm",
+    # "weatherInfo": "Carlsbad Caverns National Park is located in the Chihuahuan Desert in southeast New Mexico. Summers are hot with temperatures between 90°F (32°C) and low 100s °F (38°C). Windy conditions and mild temperatures are common in early spring (March-May) with frequent rain in early fall (August-September). This part of the country also sees cold temperatures in the winter with occasional snow and icy conditions. Most days, the park is enveloped by a gorgeous blue sky with very few clouds, 278 sunny days a year!",
+    name: "Carlsbad Caverns"
+)
+cagr= Park.create(
+    states: "AZ",
+    latLong: "lat:32.99702582, long:-111.5325383",
+    description: "Explore the mystery and complexity of an extended network of communities and irrigation canals. An Ancient Sonoran Desert People's farming community and \"Great House\" are preserved at Casa Grande Ruins. Whether the Casa Grande was a gathering place for the Desert People or simply a waypoint marker in an extensive system of canals and trading partners is but part of the mystique of the Ruins",
+    # "designation": "National Monument",
+    parkCode: "cagr",
+    # "id": "FF6B2CDF-10F5-4A7F-9437-74C1E7104C65",
+    # "directionsInfo": "Transportation is by private vehicle. The park is in Coolidge, Arizona, about an hour-long drive from either Phoenix or Tucson. From Interstate 10 take the Coolidge exits and follow the signs to the park entrance.",
+    # "directionsUrl": "http://www.nps.gov/cagr/planyourvisit/directions.htm",
+    fullName: "Casa Grande Ruins National Monument",
+    url: "https://www.nps.gov/cagr/index.htm",
+    # "weatherInfo": "Summer daytime temperatures frequently exceed 100 degrees F. Winter temperatures range from the 60's to the 80's F. Spring and fall are warm and dry, with highs in the 80's and 90's F. During summer months, be prepared for hot temperatures. Protective clothing, hats, sunscreen and personal water containers are highly recommended. BE AWARE: Walls of dirt and debris, usually miles wide and thousands of feet high, are pushed across dry desert terrain by high winds, causing dust to engulf highways.",
+    name: "Casa Grande Ruins"
+)
+casa = Park.create(
+    states: "FL",
+    latLong: "lat:29.89785701, long:-81.31217173",
+    description: "A monument not only of stone and mortar but of human determination and endurance, the Castillo de San Marcos symbolizes the clash between cultures which ultimately resulted in our uniquely unified nation.  Still resonant with the struggles of an earlier time, these original walls provide tangible evidence of America’s grim but remarkable history.",
+    # "designation": "National Monument",
+    parkCode: "casa",
+    # "id": "E455313B-782A-4CDC-A6A5-8B506FA3A4C1",
+    # "directionsInfo": "On State Route A1A overlooking Matanzas Bay in the heart of the historic district of Saint Augustine, the Castillo is approximately a five mile drive from Interstate 95.",
+    # "directionsUrl": "http://www.nps.gov/casa/planyourvisit/directions.htm",
+    fullName: "Castillo de San Marcos National Monument",
+    url: "https://www.nps.gov/casa/index.htm",
+    # "weatherInfo": "St. Augustine has a semi-tropical climate with over 300 days of sunshine each year. Summers (May-September) are hot, bright, and humid with afternoon thunderstorms common. Temperatures range from the lower 70s to the mid 90s F.\n \nSpring (March-mid-May) and Autumn (October-late November) can be pleasant with temperatures ranging from the upper 50s into the 80s F.\n \nThe Winter months (December-March) are usually dry. Temperatures can be cool ranging from the upper 30s through the 60sF.",
+    name: "Castillo de San Marcos"
+)
 # = Park.create(
 #     name: "",
 #     states: "",
