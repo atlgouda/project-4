@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Park.destroy_all
+User.destroy_all
+Visit.destroy_all
 
 brca = Park.create(
     name: "Bryce Canyon",
@@ -538,11 +540,5 @@ casa = Park.create(
     name: "Castillo de San Marcos"
 )
 # = Park.create(
-#     name: "",
-#     states: "",
-#     parkCode: "",
-#     fullName: "",
-#     latLong: "",
-#     description: "",
-#     url: ""
+
 # )
