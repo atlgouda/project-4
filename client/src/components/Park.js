@@ -27,6 +27,7 @@ export default class Park extends Component {
         <h3>{park.fullName}</h3>
         <p>State: {park.states}</p>
         <p>About: {park.description}</p>
+        <p><a href={park.url}>Website</a></p>
       </div>
     )
   }
