@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2018_11_06_171816) do
   end
 
   create_table "visits", force: :cascade do |t|
+    t.string "name"
     t.boolean "visited"
     t.boolean "wishList"
     t.bigint "user_id"
