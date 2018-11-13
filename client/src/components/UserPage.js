@@ -3,6 +3,29 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 
+const UserNames = styled.div`
+    font-size: 5vh;
+`
+const StyledButton = styled.div`
+    background-color: #7FD1F7;
+    font-size: 20px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 35px;
+    padding: 10px;
+    a{
+        text-decoration: none;
+    }
+`
+
+const BodyText = styled.div`
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 40px;
+`
 const Header = styled.div`
     background-color: #829B86;
     min-height: 15vh;
@@ -59,11 +82,14 @@ export default class UserPage extends Component {
       })
     return (
       <div>
-          <Header><h1>Select User</h1></Header>
+          <Header><h1>Select User</h1>
+          <StyledButton><Link to='/parks'>Parks Page</Link></StyledButton></Header>
           <PageBody>
-          <Link to='/parks'>Parks Page</Link>
+            <BodyText>
           
+        <UserNames>
         {userContent}
+        </UserNames>  
         <br></br>
                 <div>Sign Up!</div>
                 <form onSubmit={this.handleSubmit}>
@@ -100,6 +126,7 @@ export default class UserPage extends Component {
                     
                     <form type='submit' value='add user'></form>
                     </form>
+                    </BodyText>
                 </PageBody>
       </div>
     )

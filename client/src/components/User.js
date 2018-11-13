@@ -3,7 +3,25 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 
-
+const StyledButton = styled.div`
+    background-color: #7FD1F7;
+    font-size: 20px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 35px;
+    padding: 10px;
+    a{
+        text-decoration: none;
+    }
+`
+const BodyText = styled.div`
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 40px;
+`
 const Image = styled.img`
   height: 40vmin;
   border-radius: 200px;
@@ -75,9 +93,11 @@ export default class User extends Component {
     return (
       <div>
         <Header>
-        <Link to='/'>Back to Users</Link>
-        <h1>{user.name}</h1></Header>
+        
+        <h1>{user.name}</h1>
+        <StyledButton><Link to='/'>Back to Users</Link></StyledButton></Header>
         <PageBody>
+        <BodyText>
         <span>From: {user.state}</span>
         <Image src={user.photo_url} />
         <h3>Edit User:</h3>
@@ -105,7 +125,7 @@ export default class User extends Component {
               <input type='submit' value = 'Edit User' onClick={() => {this.goBack()}} />
             </form>
           </div>
-          <button onClick={() => this.handleDelete(user.id)}>Delete User</button>
+          <button onClick={() => this.handleDelete(user.id)}>Delete User</button></BodyText>
         </PageBody>
       </div>
     )
