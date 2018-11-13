@@ -3,6 +3,14 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 
+const ParkName = styled.div`
+    font-size: 15px;
+    
+    a{
+        text-decoration: none;
+        font-size: 3vh;
+    }
+`
 
 const StyledButton = styled.div`
     background-color: #7FD1F7;
@@ -22,6 +30,7 @@ const StyledButton = styled.div`
 const BodyText = styled.div`
     margin-left: 10%;
     margin-right: 10%;
+    border-bottom: 1px solid black;
 `
 const Header = styled.div`
     background-color: #829B86;
@@ -30,7 +39,7 @@ const Header = styled.div`
     text-align: center;
     >h1 {
         color: #414C60;
-        font-size: 30px;
+        font-size: 40px;
         font-family: 'Courier New', Courier, monospace;
     }
 `
@@ -68,8 +77,9 @@ export default class AllParks extends Component {
         const parkContent = this.state.parks.map((park, i) => {
             return (
                 <div key={i}>
-                    <Link to={`/parks/${park.id}`}>{park.fullName}</Link>
-                    <span>~  Located in: {park.states}</span>
+                    <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
+                    <span>- Located in: {park.states}</span>
+                    <br></br><br></br>
                 </div>
             )
         })

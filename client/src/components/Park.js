@@ -28,7 +28,7 @@ const Header = styled.div`
     text-align: center;
     >h1 {
         color: #414C60;
-        font-size: 30px;
+        font-size: 40px;
         font-family: 'Courier New', Courier, monospace;
     }
 `
