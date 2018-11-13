@@ -3,8 +3,27 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 
+
+const Image = styled.img`
+  height: 30vmin;
+  border-radius: 200px;
+`
+const SignUp = styled.div`
+    text-align: center;
+    font-size: 3vh;
+    font-weight: bolder;
+`
 const UserNames = styled.div`
     font-size: 5vh;
+    padding-bottom: 25px;
+    padding-top: 40px;
+    display: flex;
+    margin-left: 5%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    a {
+        text-decoration: none;
+    }
 `
 const StyledButton = styled.div`
     background-color: #7FD1F7;
@@ -73,10 +92,13 @@ export default class UserPage extends Component {
     }
 
   render() {
+
       const userContent = this.state.users.map((user, i) => {
           return (
               <div key={i}>
-                <Link to={`/users/${user.id}`}>{user.name}</Link>
+              <Image src={user.photo_url} />
+                <Link to={`/users/${user.id}`}>{user.name}</Link><br></br>
+                
               </div>
           )
       })
@@ -85,12 +107,15 @@ export default class UserPage extends Component {
           <Header><h1>Select User</h1>
           <StyledButton><Link to='/parks'>Parks Page</Link></StyledButton></Header>
           <PageBody>
+          <UserNames>
+
+            {userContent}
+            </UserNames> 
             <BodyText>
           
-        <UserNames>
-        {userContent}
-        </UserNames>  
+ 
         <br></br>
+        <SignUp>
                 <div>Sign Up!</div>
                 <form onSubmit={this.handleSubmit}>
                     <input className ="enterHere"
@@ -126,6 +151,7 @@ export default class UserPage extends Component {
                     
                     <form type='submit' value='add user'></form>
                     </form>
+                    </SignUp>
                     </BodyText>
                 </PageBody>
       </div>

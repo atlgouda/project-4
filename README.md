@@ -29,6 +29,7 @@ Once a user comes to site, they will get to a landing page with the user list an
 React, Postman, Ruby On Rails, Heroku, HTML5, CSS, Github, National Parks Service API, HTTParty
 
 ## Version 2 Wishlist
+* Infinite scroll on Parks page
 * Have visits page bring in wish list
 * Use API to show one instead of seeds
 * Map out locations 

@@ -3,6 +3,18 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 
+
+const EditButton = styled.button`
+  background: #7FD1F7;
+  height: 30px;
+  border-radius: 10px;
+`
+
+const DeleteButton = styled.button`
+  background: tomato;
+  height: 30px;
+  border-radius: 10px;
+`
 const StyledButton = styled.div`
     background-color: #7FD1F7;
     font-size: 20px;
@@ -122,10 +134,10 @@ export default class User extends Component {
               onChange = {this.handleChange}
                />           
               <br></br><br></br>
-              <input type='submit' value = 'Edit User' onClick={() => {this.goBack()}} />
+              <EditButton><input type='submit' value = 'Edit User' onClick={() => {this.goBack()}} /></EditButton>
             </form>
-          </div>
-          <button onClick={() => this.handleDelete(user.id)}>Delete User</button></BodyText>
+          </div><br></br>
+          <DeleteButton onClick={() => this.handleDelete(user.id)}>Delete User</DeleteButton></BodyText>
         </PageBody>
       </div>
     )
