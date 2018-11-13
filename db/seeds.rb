@@ -9,26 +9,16 @@ Park.destroy_all
 User.destroy_all
 Visit.destroy_all
 
-brca = Park.create(
-    name: "Bryce Canyon",
-    states: "UT",
-    parkCode: "brca",
-    fullName: "Bryce Canyon National Park",
-    latLong: "lat:37.58399144, long:-112.1826689",
-    description: "Hoodoos (irregular columns of rock) exist on every continent, but here is the largest concentration found anywhere on Earth. Situated along a high plateau at the top of the Grand Staircase, the park's high elevations include numerous life communities, fantastic dark skies, and geological wonders that defy description.",
-    url: "https://www.nps.gov/brca/index.htm",
+gouda = User.create(
+    name: "Gouda",
+    state: "GA",
+    photo_url: "https://i.imgur.com/2qp4xeg.jpg"
 )
-
-fila = Park.create(
-    name: "First Ladies",
-    states: "OH",
-    parkCode: "fila",
-    fullName: "First Ladies National Historic Site",
-    latLong: "lat:40.79689857, long:-81.37579869",
-    description: "Two properties, the home of First Lady Ida Saxton McKinley and the seven story 1895 City Bank Building, are preserved at this site, which honors the lives and accomplishment of our nation's First Ladies. The site is managed by the National Park Service and operated by the National First Ladies Library.",
-    url: "https://www.nps.gov/efmo/index.htm",
+qing = User.create(
+    name: "Qing",
+    state: "NY",
+    photo_url: "https://i.imgur.com/V8wgCwg.png"
 )
-
 afam = Park.create(
     states: "DC",
     latLong: "lat:38.916554, long:-77.025977",
@@ -343,6 +333,15 @@ boaf = Park.create(
     # "weatherInfo": "The Boston Harbor Islands have a humid maritime climate characterized by slightly cooler temperatures than the mainland, so dress in layers. Typical summer conditions feature air temperatures approximately 5-10 degrees cooler than the mainland between 60-80 Fahrenheit, winds of 0-15 knots and waves of 1-3 feet.",
     name: "Boston Harbor Islands"
 )
+brca = Park.create(
+    name: "Bryce Canyon",
+    states: "UT",
+    parkCode: "brca",
+    fullName: "Bryce Canyon National Park",
+    latLong: "lat:37.58399144, long:-112.1826689",
+    description: "Hoodoos (irregular columns of rock) exist on every continent, but here is the largest concentration found anywhere on Earth. Situated along a high plateau at the top of the Grand Staircase, the park's high elevations include numerous life communities, fantastic dark skies, and geological wonders that defy description.",
+    url: "https://www.nps.gov/brca/index.htm",
+)
 brvb= Park.create(
     states: "KS",
     latLong: "lat:39.03787665, long:-95.67614437",
@@ -539,6 +538,170 @@ casa = Park.create(
     # "weatherInfo": "St. Augustine has a semi-tropical climate with over 300 days of sunshine each year. Summers (May-September) are hot, bright, and humid with afternoon thunderstorms common. Temperatures range from the lower 70s to the mid 90s F.\n \nSpring (March-mid-May) and Autumn (October-late November) can be pleasant with temperatures ranging from the upper 50s into the 80s F.\n \nThe Winter months (December-March) are usually dry. Temperatures can be cool ranging from the upper 30s through the 60sF.",
     name: "Castillo de San Marcos"
 )
-# = Park.create(
+fila = Park.create(
+    name: "First Ladies",
+    states: "OH",
+    parkCode: "fila",
+    fullName: "First Ladies National Historic Site",
+    latLong: "lat:40.79689857, long:-81.37579869",
+    description: "Two properties, the home of First Lady Ida Saxton McKinley and the seven story 1895 City Bank Building, are preserved at this site, which honors the lives and accomplishment of our nation's First Ladies. The site is managed by the National Park Service and operated by the National First Ladies Library.",
+    url: "https://www.nps.gov/fila/index.htm",
+)
 
+chat = Park.create(
+    states: "GA",
+    latLong: "lat:33.99698333, long:-84.28953177",
+    description: "Today the river valley attracts us for so many reasons. Take a solitary walk to enjoy nature’s display, raft leisurely through the rocky shoals with friends, fish the misty waters as the sun comes up, or have a picnic on a Sunday afternoon. Get Outdoors and experience your Chattahoochee River National Recreation Area as you have never done before.",
+    # "designation": "National Recreation Area",
+    parkCode: "chat",
+    # "id": "021F297B-D672-4794-8C5E-BB58743F252A",
+    # "directionsInfo": "To find the Island Ford Visitor Center enter the physical address listed above into your GPS unit or your favorite map software. Once you have arrived at 8800 Roberts Drive turn onto Island Ford Parkway and follow the signs to the park headquarters.",
+    # "directionsUrl": "http://www.nps.gov/chat/planyourvisit/directions.htm",
+    fullName: "Chattahoochee River National Recreation Area",
+    url: "https://www.nps.gov/chat/index.htm",
+    # "weatherInfo": "Summers typically consist of long spells of warm, humid weather. Average highs are in the lower 90's and overnight lows range from the upper 60's to lower 70's. \n\nWinters are more variable with highs averaging from the mid 50's to lower 60's while the lows average in the mid 30's. Oftentimes, stretches of mild weather will alternate with cold spells.\n\nSpring and Autumn seasons are characterized by much variability from day to day and from year to year.",
+    name: "Chattahoochee River"
+)
+chch = Park.create(
+    states: "GA,TN",
+    latLong: "lat:34.94317623, long:-85.28749537",
+    description: "In 1863, Union and Confederate forces fought for control of Chattanooga, known as the \"Gateway to the Deep South.\" The Confederates were victorious at nearby Chickamauga in September. However, renewed fighting in Chattanooga that November provided Union troops victory and control of the city. After the fighting, a Confederate soldier ominously wrote, \"This...is the death-knell of the Confederacy.\"",
+    # "designation": "National Military Park",
+    parkCode: "chch",
+    # "id": "FD536267-125D-4CEB-8978-2B2767C3B2FF",
+    # "directionsInfo": "From I-75, take exit 350 onto Battlefield Parkway (GA HWY 2) and continue to the intersection of Battlefield Parkway and LaFayette Road. Turn left onto LaFayette Road and continue for approximately 1 mile. The visitor center will be on the right. \n\nFrom I-24, take exit 180 onto Rossville Boulevard (US HWY 27). Continue south to the intersection of Battlefield Parkway. Drive through the intersection, continuing on the LaFayette Road. The visitor center will be on the right.",
+    # "directionsUrl": "http://www.nps.gov/chch/planyourvisit/directions.htm",
+    fullName: "Chickamauga & Chattanooga National Military Park",
+    url: "https://www.nps.gov/chch/index.htm",
+    # "weatherInfo": "The climate in northern Georgia is generally temperate. Short, cool winters give relief from hot summers. Most visitors enjoy this area during long, mild fall and spring seasons.",
+    name: "Chickamauga & Chattanooga"
+)
+cuis = Park.create(
+    states: "GA",
+    latLong: "lat:30.85857484, long:-81.45253575",
+    description: "St Marys is the gateway to Cumberland Island, Georgia's largest and southernmost barrier island. Here pristine maritime forests, undeveloped beaches and wide marshes whisper the stories of both man and nature. Natives, missionaries, enslaved African Americans and Wealthy Industrialists all walked here.  Cumberland Island is also home to over 9,800 acres of Congressionally designated Wilderness.",
+    # "designation": "National Seashore",
+    parkCode: "cuis",
+    # "id": "EF680908-DE76-4336-BD51-F33BEB09B4D7",
+    # "directionsInfo": "Driving Directions\nTo reach the visitor center from Interstate 95:\n•\tTake Exit 3 for US 40\n•\tTake US 40 East toward “Historic Downtown St. Marys”\n•\tUS 40 becomes Osborne Rd. Continue on until you reach the waterfront\n•\tTurn right on St. Marys Rd \n•\tThe visitor center will be two blocks down on your left (113 St. Marys St W, St Marys GA 31558)",
+    # "directionsUrl": "http://www.nps.gov/cuis/planyourvisit/directions.htm",
+    fullName: "Cumberland Island National Seashore",
+    url: "https://www.nps.gov/cuis/index.htm",
+    # "weatherInfo": "Cumberland Island’s climate is hot and humid during summer when temperatures tend to be in the 80's (>26 C) and mild during winter when temperatures tend to be in the 60's (<20 C). The warmest month of the year is July with an average high of 90 degrees F (32 C), while the coldest is January with an average low of 45 degrees F (44 C). Visit the Current Conditions page for an up-to-date local forecast:\nhttps://www.nps.gov/cuis/planyourvisit/conditions.htm#weather",
+    name: "Cumberland Island"
+)
+fofr = Park.create(
+    states: "GA",
+    latLong: "lat:31.2214699, long:-81.39452014",
+    description: "Georgia's fate was decided in 1742 when Spanish and British forces clashed on St. Simons Island. Fort Frederica's troops defeated the Spanish, ensuring Georgia's future as a British colony. Today, the archeological remnants of Frederica are protected by the National Park Service.",
+    # "designation": "National Monument",
+    parkCode: "fofr",
+    # "id": "4301F6E9-750B-489D-B8E4-4204165894A1",
+    # "directionsInfo": "South on I 95 to U.S. 17:\nExit 38 and Left onto Spur 25. Follow Spur 25 until U.S. 17. Take a right on U.S. 17 (south).\n\nNorth on I 95 to U.S. 17:\nExit 29 and Right onto U.S. 17.\n\nFrom US 17:\nTake Causeway to St. Simons Island. Take first left onto Sea Island Rd. Go 1.5 miles to third traffic light, and Left onto Frederica Road. Follow Frederica Road for two miles (take second right off roundabout). The park entrance 300 yards past Christ Church.",
+    # "directionsUrl": "http://www.nps.gov/fofr/planyourvisit/directions.htm",
+    fullName: "Fort Frederica National Monument",
+    url: "https://www.nps.gov/fofr/index.htm",
+    # "weatherInfo": "The site enjoys mild climate from fall through early summer, followed by hot, humid summers.",
+    name: "Fort Frederica"
+)
+fopu= Park.create(
+    states: "GA",
+    latLong: "lat:32.0308274, long:-80.93361681",
+    description: "For much of the 19th century, masonry fortifications were the United States’ main defense against overseas enemies. However, during the Civil War, new technology proved its superiority to these forts. The Union army used rifled cannon and compelled the Confederate garrison inside Fort Pulaski to surrender. The siege was a landmark experiment in the history of military science and invention.",
+    # "designation": "National Monument",
+    parkCode: "fopu",
+    # "id": "3249A652-F901-40F2-A608-635B0F41574B",
+    # "directionsInfo": "From Interstate I-95, take Exit 99 onto Interstate I-16 East (James L Gillis Memorial Hwy) for 7 miles.\nTake Exit 164A onto Interstate I-516 East toward US-80 East.\nTake Exit 3 (US-17 S/US-80 E) toward US-80 East. \nTurn left onto Ocean Highway, Ogeechee Rd (US-17 N, US-80 East). \nBear right onto West Victory Drive (US-80 East).\nContinue on US-80 East for 13 miles.\n\nGPS Coordinates for Fort Pulaski National Monument:\n\nN32° 01.680 W080° 53.525",
+    # "directionsUrl": "http://www.nps.gov/fopu/planyourvisit/directions.htm",
+    fullName: "Fort Pulaski National Monument",
+    url: "https://www.nps.gov/fopu/index.htm",
+    # "weatherInfo": "Savannah has a humid sub tropical climate with over two hundred days of sunshine each year. Summers are typically hot, bright and humid with afternoon thunderstorms common. Temperatures often range from the lower 70s to the mid 90s F. Spring and autumn can be quite pleasant with temperatures ranging from the upper 50s into the 80s F. The winter months are usually dry. Temperatures can be cooler than one would expect, ranging from the upper 30s through the 60s F generally, though sudden cold snaps can occur.",
+    name: "Fort Pulaski"
+)
+guge = Park.create(
+    states: "FL,GA,NC,SC",
+    latLong: "lat:32.8470785915852, long:-79.8232242465019",
+    description: "Designated by Congress in 2006, the Gullah Geechee Cultural Heritage Corridor extends from Wilmington, North Carolina in the north to Jacksonville, Florida in the south. It is home to one of America's most unique cultures, a tradition first shaped by captive Africans brought to the southern United States from West Africa and continued in later generations by their descendents.",
+    # "designation": "Cultural Heritage Corridor",
+    parkCode: "guge",
+    # "id": "D35A4F27-7E52-4711-BF1F-37756A9D893C",
+    # directionsInfo: "The corridor encompasses a cultural and linguistic area along the southeastern coast of the United States from the northern border of Pender County, North Carolina to the southern border of St. Johns County, Florida and 30 miles inland.  The Commission operates a small business office on Johns Island, SC., but there are many sites to explore within the Corridor.",
+    # "directionsUrl": "http://www.gullahgeecheecorridor.org",
+    fullName: "Gullah/Geechee Cultural Heritage Corridor",
+    url: "https://www.nps.gov/guge/index.htm",
+    # "weatherInfo": "The weather varies throughout the year and even throughout the day. Please check the National Weather Service information at http://www.weather.gov for forecast information.",
+    name: "Gullah/Geechee"
+)
+    jica= Park.create(
+        states: "GA",
+        latLong: "lat:32.03059943, long:-84.41606653",
+        description: "Few U.S. Presidents have had such close ties with where they were born and raised. The rural southern culture of Plains, Georgia, that revolves around farming, church and school, had a large influence in molding the character and in shaping the political policies of the 39th President of the United States.",
+        # "designation": "National Historic Site",
+        parkCode: "jica",
+        # "id": "F63CFF21-C861-422D-A725-B8F3ECFF6EAE",
+        # "directionsInfo": "The Jimmy Carter National Historic Site, Plains High School Museum and Visitor Center is located in Plains, Georgia. The address is 300 North Bond Street. The zip code is 31780",
+        # "directionsUrl": "http://www.nps.gov/jica/planyourvisit/directions.htm",
+        fullName: "Jimmy Carter National Historic Site",
+        url: "https://www.nps.gov/jica/index.htm",
+        # "weatherInfo": "Weather in Southwest Georgia can change in the blink of an eye during the summer months. Thunderstorms and high temperatures can make it unpleasant for visitors. Check the local forecast and dress appropriately.",
+        name: "Jimmy Carter"
+)
+kemo = Park.create(
+    states: "GA",
+    latLong: "lat:33.95370717, long:-84.59214186",
+    description: "Kennesaw Mountain National Battlefield Park is a 2,965 acre National Battlefield that preserves a Civil War battleground of the Atlanta Campaign. Opposing forces maneuvered and fought here from June 19, 1864 until July 2, 1864. Although most famous as a Civil War battlefield, Kennesaw Mountain has a much richer story.",
+    # "designation": "National Battlefield Park",
+    parkCode: "kemo",
+    # "id": "AA1E3B48-8B98-4F47-A642-C266A92AB523",
+    # "directionsInfo": "Take exit 269 (Barrett Parkway). At the stoplight head west onto Barrett Parkway.\nFollow Barrett Parkway for approximately 3 miles, turn left at the light, onto Old Hwy 41.\nTurn right at your next light, Stilesboro Rd.\nThe visitor center will be immediately on your left (brown and white signs located along the roads will guide you as well).",
+    # "directionsUrl": "http://www.nps.gov/kemo/planyourvisit/directions.htm",
+    fullName: "Kennesaw Mountain National Battlefield Park",
+    url: "https://www.nps.gov/kemo/index.htm",
+    # "weatherInfo": "Before you start your trip to the mountain, check the local weather forecast to be sure that you will have a dry time. Though we are located north of Atlanta, we're still have the same hot summers and mild winters as our neighbors. The mountain top generally ranges 8-10 degrees cooler than at the base. In fall and winter, be prepared with a light weight jacket on hand. After planning your activities, check back to see what the weather will have in store for your day.",
+    name: "Kennesaw Mountain"
+)
+malu = Park.create(
+    states: "GA",
+    latLong: "lat:33.75618241, long:-84.37256768",
+    description: "A young boy grows up in a time of segregation…A dreamer is moved by destiny into leadership of the modern civil rights movement…This was Martin Luther King, Jr.  Come hear his story, visit the home of his birth, and where he played as a child.  Walk in his footsteps, and hear his voice in the church where he moved hearts and minds.  Marvel at how he was an instrument for social change.",
+    # "designation": "National Historical Park",
+    parkCode: "malu",
+    # "id": "59636FCE-DE81-4D98-890C-585BD48F9AD0",
+    # "directionsInfo": "The park is accessible via public transportation and by car.",
+    # "directionsUrl": "http://www.nps.gov/malu/planyourvisit/directions.htm",
+    fullName: "Martin Luther King, Jr. National Historical Park",
+    url: "https://www.nps.gov/malu/index.htm",
+    # "weatherInfo": "Summers typically are warm and humid with average afternoon high temperatures are in the lower 90s.  During winter the high temperatures average from the mid-50s to  the lower 60s.  Lows average in the mid-30s.   Spring and Autumn seasons are characterized by much variability from day to day and from year to year.  The average date of first freeze is in mid-November and the date of the last freeze is mid to late March.",
+    name: "Martin Luther King, Jr."
+)
+ocmu = Park.create(
+    states: "GA",
+    latLong: "lat:32.83816576, long:-83.60224853",
+    description: "Welcome to Ocmulgee National Monument. This park is a prehistoric American Indian site.  American Indians first came here during the Paleo-Indian period hunting Ice Age mammals. Many different American Indian cultures occupied this land for thousands of years.  Around 900 CE, the Mississippian Period began. They constructed mounds for their elite, which remain today.",
+    # "designation": "National Monument",
+    parkCode: "ocmu",
+    # "id": "81AFEB37-7119-4BF1-B65B-806BAB973FFD",
+    # "directionsInfo": "Drive on I-75 to Macon. Exit I-75 onto I-16 east (exit on left) . Get off I-16 at exit 2 (Coliseum Drive), take a left under the highway and proceed to where Coliseum Dr. ends at Emery Highway. Turn right on Emery Highway and proceed to the third light. Our entrance is on the right side of the road.",
+    # "directionsUrl": "https://www.nps.gov/ocmu/planyourvisit/directions.htm",
+    fullName: "Ocmulgee National Monument",
+    url: "https://www.nps.gov/ocmu/index.htm",
+    # "weatherInfo": "Macon has a humid subtropical climate (Köppen climate classification Cfa). The normal monthly mean temperature ranges from 46.3 °F (7.9 °C) in January to 81.8 °F (27.7 °C) in July. On average, there are 4.8 days with 100 °F (38 °C\n\n\nWinter's are mild. Temps ranging from 30 degrees to 50 degrees. Spring is mild but wet. Temps ranging from 50 degrees to low 70 degrees. Summers are hot and very humid. Temp ranging from upper 80 degrees to 100 degrees. Fall is pleasant. Temps ranging from 60 to 80 degrees.",
+    name: "Ocmulgee"
+)
+trte = Park.create(
+    states: "AL,AR,GA,IL,KY,MO,NC,OK,TN",
+    latLong: "",
+    description: "Remember and commemorate the survival of the Cherokee people, forcefully removed from their homelands in Georgia, Alabama, and Tennessee to live in Indian Territory, now Oklahoma. They traveled by foot, horse, wagon, or steamboat in 1838-1839.",
+    # "designation": "National Historic Trail",
+    parkCode: "trte",
+    # "id": "07A92FEB-682E-4895-8070-3323BC6F9EF7",
+    # "directionsInfo": "The Trail of Tears National Historic Trail crosses nine states.",
+    # "directionsUrl": "http://www.nps.gov/trte/planyourvisit/directions.htm",
+    fullName: "Trail Of Tears National Historic Trail",
+    url: "https://www.nps.gov/trte/index.htm",
+    # weatherInfo": "Due to the length of the Trail of Tears National Historic Trail, be sure to consult local weather sources for the region you'll be visiting. Here are two links to the central US and southeast US.\n\nhttp://usatoday30.usatoday.com/weather/forecast/regional-central-temps.htm\n\nhttp://graphical.weather.gov/sectors/southeast.php",
+    name: "Trail Of Tears"
+)
+# = Park.create(
+    
 # )

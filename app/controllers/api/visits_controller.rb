@@ -1,9 +1,20 @@
-class VisitsController < ApplicationController
+class Api::VisitsController < ApplicationController
   def index
-    @visits = Visit.all
+    @user = User.find(params[:user_id])
+    @visits = @user.visits.all
     render json: @visits
   end
-    
+
+  def get_user
+    @user = User.find(params[:user_id])
+    render json: @user
+  end
+
+  def get_park
+    @park = Park.find(params[:id])
+    render json: @park
+  end
+  
 def create
   @visit = Visit.create!(user_params)
   render json: @visit

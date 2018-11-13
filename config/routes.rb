@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   
   namespace :api do
     resources :users do
-      resources :visits
+      resources :visits do
+        get 'get_user'
+        get 'get_park'
   end
+end
 end
   namespace :api do
     resources :parks
@@ -14,4 +17,5 @@ end
   # namespace :api do
   #   resources :parks, param: :parkCode
   # end
+
 end
