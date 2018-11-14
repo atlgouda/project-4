@@ -27,10 +27,7 @@ export default class AllVisits extends Component {
     }
     async componentDidMount(){
         const userId = this.props.match.params.id
-        // const user = await this.fetchOneUser(userId)
         await this.fetchVisits()
-
-        // this.setState({user, visits})
     }
 
     fetchOneUser = async () => {
@@ -42,20 +39,14 @@ export default class AllVisits extends Component {
     fetchVisits = async () => {
         const userId = this.props.match.params.userId
         const visitId = this.props.match.params.id
-        // const parkId = this.props.match.params.parkId
         const response = await axios.get(`/api/users/${userId}/visits`)
         const username = await axios.get(`/api/users/${userId}/visits/${visitId}/get_user`)
-        // const parkName = await axios.get(`/api/parks/${parkId}/get_parkName`)
         this.setState({visits: response.data, user: username.data, 
-            // park: parkName.data
         })
-        console.log(this.state.visit)
-
-        
+        console.log(this.state.visit)     
     }
 
   render() {
-
     const visitContent = this.state.visits.map((visit, i) =>{
         return (
             <div key={i}>
@@ -65,12 +56,10 @@ export default class AllVisits extends Component {
         )
     })
 
-
     return (
       <div>
         {visitContent}
-        {this.state.user.name}
-        
+        {this.state.user.name}  
       </div>
     )
   }

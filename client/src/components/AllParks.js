@@ -5,13 +5,11 @@ import styled from 'styled-components'
 
 const ParkName = styled.div`
     font-size: 15px;
-    
     a{
         text-decoration: none;
         font-size: 3vh;
     }
 `
-
 const StyledButton = styled.div`
     background-color: #7FD1F7;
     font-size: 20px;
@@ -26,7 +24,6 @@ const StyledButton = styled.div`
         text-decoration: none;
     }
 `
-
 const BodyText = styled.div`
     margin-left: 10%;
     margin-right: 10%;
@@ -48,30 +45,18 @@ const PageBody = styled.div`
     min-height: 85vh;
     padding: 40px;
 `
-
 export default class AllParks extends Component {
     state = {
         parks: []
     }
-
     async componentDidMount() {
         await this.fetchParks()
     }
-
-
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
         this.setState({parks: response.data})
     }
- 
-    // componentDidMount(){
-    //     this.ParkList()
-    // }
 
-    // ParkList() {
-    //     return $.getJSON('@parks')
-    //     .then(({results}) => this.setState ({park: results}))
-    // }
   render() {
       
         const parkContent = this.state.parks.map((park, i) => {
@@ -83,8 +68,6 @@ export default class AllParks extends Component {
                 </div>
             )
         })
-    
-
     return (
       <div>
         <Header><h1>National Parks</h1>
@@ -92,7 +75,6 @@ export default class AllParks extends Component {
         <PageBody>
         <BodyText>
         {parkContent}
-        {/* <Link to={`/parks/${park.id}`}>Go to a Park</Link> */}
         </BodyText>
         </PageBody>
       </div>

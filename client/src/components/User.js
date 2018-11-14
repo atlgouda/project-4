@@ -9,7 +9,6 @@ const EditButton = styled.button`
   height: 30px;
   border-radius: 10px;
 `
-
 const DeleteButton = styled.button`
   background: tomato;
   height: 30px;
@@ -59,8 +58,6 @@ export default class User extends Component {
         user: {},
         visits: [],
     }
-
-    //Check to see if async needed
     async componentDidMount() {
         const userId = this.props.match.params.id
         const user = await this.fetchOneUser(userId)
@@ -68,30 +65,20 @@ export default class User extends Component {
     }
     handleDelete = async (userId) => {
       const deleteResponse = await axios.delete(`/api/users/${userId}`)
-      // const filteredUsers = this.state.user.filter(user => userId !== user.id)
-      // this.setState ({ users: filteredUsers })
       this.goBack()
     }
-
     goBack = () => {
       window.location.replace(`/`)
     }
-
-
-    
-    //Change to fetchUserAndVisitData later
-    
     fetchOneUser = async (id) => {
         const response = await axios.get(`/api/users/${id}`)
         return response.data
     }
-
     handleChange = (event) => {
       const user = {...this.state.user}
       user[event.target.name] = event.target.value
       this.setState({user})
     }
-
     handleUpdate = async (event) => {
       const userId =  this.props.match.params.id
       const response = await axios.put(`/api/users/${userId}`, this.state.user)
@@ -101,11 +88,9 @@ export default class User extends Component {
 
   render() {
       const user = this.state.user
-
     return (
       <div>
-        <Header>
-        
+        <Header>     
         <h1>{user.name}</h1>
         <StyledButton><Link to='/'>Back to Users</Link></StyledButton></Header>
         <PageBody>

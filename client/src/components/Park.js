@@ -68,7 +68,6 @@ export default class Park extends Component {
         <p>State: {park.states}</p>
         <p>About: {park.description}</p>
         <p><a target="_blank" href={park.url}>Website</a></p><br></br>
-        
         </BodyText>
         </PageBody>
       </div>
