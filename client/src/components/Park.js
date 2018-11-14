@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 
@@ -39,13 +39,13 @@ const PageBody = styled.div`
 
 export default class Park extends Component {
     state = {
-        park:{}
+        park: {}
     }
 
     async componentDidMount() {
         const parkCode = this.props.match.params.id
         const park = await this.fetchOnePark(parkCode)
-        this.setState({park})
+        this.setState({ park })
     }
 
     fetchOnePark = async (parkCode) => {
@@ -53,24 +53,24 @@ export default class Park extends Component {
         return response.data
     }
 
-  render() {
-      const park = this.state.park
-    return (
-      <div>
-        <Header>
-        <h1>{park.name}</h1>
-        <StyledButton><Link to='/parks'>Back to All Parks</Link></StyledButton>
-        </Header> 
-        <PageBody>
-        <br></br>
-        <BodyText>
-        <h3>{park.fullName}</h3>
-        <p>State: {park.states}</p>
-        <p>About: {park.description}</p>
-        <p><a target="_blank" href={park.url}>Website</a></p><br></br>
-        </BodyText>
-        </PageBody>
-      </div>
-    )
-  }
+    render() {
+        const park = this.state.park
+        return (
+            <div>
+                <Header>
+                    <h1>{park.name}</h1>
+                    <StyledButton><Link to='/parks'>Back to All Parks</Link></StyledButton>
+                </Header>
+                <PageBody>
+                    <br></br>
+                    <BodyText>
+                        <h3>{park.fullName}</h3>
+                        <p>State: {park.states}</p>
+                        <p>About: {park.description}</p>
+                        <p><a target="_blank" href={park.url}>Website</a></p><br></br>
+                    </BodyText>
+                </PageBody>
+            </div>
+        )
+    }
 }

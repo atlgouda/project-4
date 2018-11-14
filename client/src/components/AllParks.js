@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 
@@ -54,11 +54,11 @@ export default class AllParks extends Component {
     }
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
-        this.setState({parks: response.data})
+        this.setState({ parks: response.data })
     }
 
-  render() {
-      
+    render() {
+
         const parkContent = this.state.parks.map((park, i) => {
             return (
                 <div key={i}>
@@ -68,16 +68,16 @@ export default class AllParks extends Component {
                 </div>
             )
         })
-    return (
-      <div>
-        <Header><h1>National Parks</h1>
-        <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
-        <PageBody>
-        <BodyText>
-        {parkContent}
-        </BodyText>
-        </PageBody>
-      </div>
-    )
-  }
+        return (
+            <div>
+                <Header><h1>National Parks</h1>
+                    <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
+                <PageBody>
+                    <BodyText>
+                        {parkContent}
+                    </BodyText>
+                </PageBody>
+            </div>
+        )
+    }
 }
