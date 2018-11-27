@@ -49,12 +49,13 @@ export default class AllParks extends Component {
     state = {
         parks: []
     }
-    async componentDidMount() {
-        await this.fetchParks()
+    componentWillMount() {
+        this.fetchParks()
     }
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
-        this.setState({ parks: response.data })
+        await this.setState({ parks: response.data })
+        return response.data
     }
 
     render() {
@@ -74,7 +75,7 @@ export default class AllParks extends Component {
                     <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
                 <PageBody>
                     <BodyText>
-                        {parkContent}
+                         {parkContent}
                     </BodyText>
                 </PageBody>
             </div>
