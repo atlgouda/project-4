@@ -58,27 +58,50 @@ export default class AllParks extends Component {
         return response.data
     }
 
-    render() {
 
+    render() {
+      
         const parkContent = this.state.parks.map((park, i) => {
             return (
                 <div key={i}>
-                    <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
-                    <span>- Located in: {park.states}</span>
-                    <br></br><br></br>
+                    <Link to={`/parks/${park.parkCode}`}>{park.fullName}</Link>
+                    <span>~  Located in: {park.states}</span>
                 </div>
             )
         })
-        return (
-            <div>
-                <Header><h1>National Parks</h1>
-                    <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
-                <PageBody>
-                    <BodyText>
-                         {parkContent}
-                    </BodyText>
-                </PageBody>
-            </div>
-        )
-    }
+    
+
+    return (
+      <div>
+        <Header><h1>National Parks</h1></Header>
+        <PageBody><Link to='/'>Home Page</Link>
+        {parkContent}
+        {/* <Link to={`/parks/${park.id}`}>Go to a Park</Link> */}
+        </PageBody>
+      </div>
+    )
+  }
+    // render() {
+
+    //     const parkContent = this.state.parks.map((park, i) => {
+    //         return (
+    //             <div key={i}>
+    //                 <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
+    //                 <span>- Located in: {park.states}</span>
+    //                 <br></br><br></br>
+    //             </div>
+    //         )
+    //     })
+    //     return (
+    //         <div>
+    //             <Header><h1>National Parks</h1>
+    //                 <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
+    //             <PageBody>
+    //                 <BodyText>
+    //                      {parkContent}
+    //                 </BodyText>
+    //             </PageBody>
+    //         </div>
+    //     )
+    // }
 }
