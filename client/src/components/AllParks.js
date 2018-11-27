@@ -45,17 +45,32 @@ const PageBody = styled.div`
     min-height: 85vh;
     padding: 40px;
 `
+// export default class AllParks extends Component {
+//     state = {
+//         parks: []
+//     }
+//     componentWillMount() {
+//         this.fetchParks()
+//     }
+//     fetchParks = async () => {
+//         const response = await axios.get('/api/parks')
+//         await this.setState({ parks: response.data })
+//         return response.data
+//     }
+
 export default class AllParks extends Component {
     state = {
         parks: []
     }
-    componentWillMount() {
-        this.fetchParks()
+
+    async componentDidMount() {
+        await this.fetchParks()
     }
+
+
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
-        await this.setState({ parks: response.data })
-        return response.data
+        this.setState({parks: response.data.data})
     }
 
 
