@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Park.destroy_all
 
+#loop /  create
+
 brca = Park.create(
     name: "Bryce Canyon",
     states: "UT",
