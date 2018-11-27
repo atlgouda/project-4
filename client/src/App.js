@@ -15,7 +15,6 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={UserPage}/>
           <Route exact path="/users/:id" component ={User} />
-
           <Route exact path='/parks' component = {AllParks} />
           <Route exact path="/parks/:id" component = {Park} />
           <Route exact path="/users/:userId/visits" component = {AllVisits} />

@@ -3,9 +3,12 @@ class Api::ParksController < ApplicationController
   include HTTParty
 
   def index
-    @parks = Park.all
+
+    @parks = HTTParty.get("https://developer.nps.gov/api/v1/parks?limit=50&api_key=gMM1UxRZusixLtC3yG4nwWDKPypQvRFD7DUfr8SQ")
     render json: @parks
-  end
+    puts @parks["data"]
+    #Parse
+    end
 
   def show
     @park = Park.find(params[:id])    
