@@ -4,7 +4,7 @@ class Park < ApplicationRecord
     has_many :users, through: :visits
     
     def to_param 
-        parkCode
+        parkId
     end
 
 

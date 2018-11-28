@@ -701,7 +701,7 @@ qing = User.create(
 #     url: "https://www.nps.gov/trte/index.htm",
 #     # weatherInfo": "Due to the length of the Trail of Tears National Historic Trail, be sure to consult local weather sources for the region you'll be visiting. Here are two links to the central US and southeast US.\n\nhttp://usatoday30.usatoday.com/weather/forecast/regional-central-temps.htm\n\nhttp://graphical.weather.gov/sectors/southeast.php",
 #     name: "Trail Of Tears"
-)
+# )
 # = Park.create(
     
 # )

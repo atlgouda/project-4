@@ -43,8 +43,8 @@ export default class Park extends Component {
     }
 
     async componentDidMount() {
-        const parkCode = this.props.match.params.id
-        const park = await this.fetchOnePark(parkCode)
+        const parkId = this.props.match.params.id
+        const park = await this.fetchOnePark(parkId)
         this.setState({ park })
         console.log(park)
     }
