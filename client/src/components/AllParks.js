@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
@@ -45,78 +46,39 @@ const PageBody = styled.div`
     min-height: 85vh;
     padding: 40px;
 `
-// export default class AllParks extends Component {
-//     state = {
-//         parks: []
-//     }
-//     componentWillMount() {
-//         this.fetchParks()
-//     }
-//     fetchParks = async () => {
-//         const response = await axios.get('/api/parks')
-//         await this.setState({ parks: response.data })
-//         return response.data
-//     }
-
 export default class AllParks extends Component {
     state = {
         parks: []
     }
-
     async componentDidMount() {
         await this.fetchParks()
     }
-
-
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
-        this.setState({parks: response.data.data})
+        this.setState({ parks: response.data })
     }
 
-
     render() {
-      
+
         const parkContent = this.state.parks.map((park, i) => {
             return (
                 <div key={i}>
-                    <Link to={`/parks/${park.id}`}>{park.fullName}</Link>
-                    <span>~  Located in: {park.states}</span>
+                    <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
+                    <span>- Located in: {park.states}</span>
+                    <br></br><br></br>
                 </div>
             )
         })
-    
-
-    return (
-      <div>
-        <Header><h1>National Parks</h1></Header>
-        <PageBody><Link to='/'>Home Page</Link>
-        {parkContent}
-        {/* <Link to={`/parks/${park.id}`}>Go to a Park</Link> */}
-        </PageBody>
-      </div>
-    )
-  }
-    // render() {
-
-    //     const parkContent = this.state.parks.map((park, i) => {
-    //         return (
-    //             <div key={i}>
-    //                 <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
-    //                 <span>- Located in: {park.states}</span>
-    //                 <br></br><br></br>
-    //             </div>
-    //         )
-    //     })
-    //     return (
-    //         <div>
-    //             <Header><h1>National Parks</h1>
-    //                 <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
-    //             <PageBody>
-    //                 <BodyText>
-    //                      {parkContent}
-    //                 </BodyText>
-    //             </PageBody>
-    //         </div>
-    //     )
-    // }
+        return (
+            <div>
+                <Header><h1>National Parks</h1>
+                    <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
+                <PageBody>
+                    <BodyText>
+                        {parkContent}
+                    </BodyText>
+                </PageBody>
+            </div>
+        )
+    }
 }

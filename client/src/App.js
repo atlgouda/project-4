@@ -7,6 +7,7 @@ import User from './components/User';
 import AllParks from './components/AllParks';
 import Park from './components/Park';
 import AllVisits from './components/AllVisits';
+import WishList from './components/WishList';
 
 class App extends Component {
   render() {
@@ -18,6 +19,8 @@ class App extends Component {
           <Route exact path='/parks' component = {AllParks} />
           <Route exact path="/parks/:id" component = {Park} />
           <Route exact path="/users/:userId/visits" component = {AllVisits} />
+          <Route exact path="/wishlistparks" component = {WishList} />
+ 
                     {/* <Route exact path="/parks?parkCode=:id" component = {Park} /> */}
           </Switch>
       </Router>

@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
@@ -39,18 +40,29 @@ const PageBody = styled.div`
 
 export default class Park extends Component {
     state = {
-        park: {}
+        park: {},
+        wishListParks: []
     }
 
     async componentDidMount() {
-        const parkId = this.props.match.params.id
-        const park = await this.fetchOnePark(parkId)
+        const parkCode = this.props.match.params.id
+        const park = await this.fetchOnePark(parkCode)
         this.setState({ park })
-        console.log(park)
     }
 
-    fetchOnePark = async (park) => {
-        const response = await axios.get(`/api/parks/${park}`)
+    handleWishListPark = async () => {
+        const parkToPush = this.state.park
+       const wishListParks = [...this.state.wishListParks]
+       wishListParks.push(parkToPush)
+       this.setState({wishListParks}) 
+    }
+    addParkToWishList = async (event) => {
+        event.preventDefault()
+        this.props.addParkToArrayWishList(this.state.wishListParks)
+    }
+
+    fetchOnePark = async (parkCode) => {
+        const response = await axios.get(`/api/parks/${parkCode}`)
         return response.data
     }
 
@@ -62,13 +74,25 @@ export default class Park extends Component {
                     <h1>{park.name}</h1>
                     <StyledButton><Link to='/parks'>Back to All Parks</Link></StyledButton>
                 </Header>
+                <div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><input class="fa fa-search"></input></button>
+    </form>
+  </div>
+</div>
                 <PageBody>
                     <br></br>
                     <BodyText>
                         <h3>{park.fullName}</h3>
                         <p>State: {park.states}</p>
                         <p>About: {park.description}</p>
-                        <p><a target="_blank" href={park.url}>Website</a></p><br></br>
+                        <p><a target="_blank" rel="noopener noreferrer" href={park.url}>Website</a></p><br></br>
+                        <button onClick={() => { this.handleWishListPark() }}>Add this park to Wish List</button>
                     </BodyText>
                 </PageBody>
             </div>
