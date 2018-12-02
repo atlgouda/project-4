@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import UserPage from './components/UserPage';
 import User from './components/User';
@@ -10,6 +9,9 @@ import AllVisits from './components/AllVisits';
 import WishList from './components/WishList';
 
 class App extends Component {
+
+  
+
   render() {
     return (
       <Router>

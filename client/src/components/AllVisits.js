@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+// import styled from 'styled-components'
+// import { Link } from 'react-router-dom'
 
 export default class AllVisits extends Component {
     state = {
@@ -26,7 +26,7 @@ export default class AllVisits extends Component {
 
     }
     async componentDidMount() {
-        const userId = this.props.match.params.id
+        // const userId = this.props.match.params.id
         await this.fetchVisits()
     }
 

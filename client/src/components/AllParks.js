@@ -1,8 +1,10 @@
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+// import ReactDOM from 'react-dom'
 import axios from 'axios'
 import styled from 'styled-components'
+import WishList from './WishList';
 
 const ParkName = styled.div`
     font-size: 15px;
@@ -48,24 +50,44 @@ const PageBody = styled.div`
 `
 export default class AllParks extends Component {
     state = {
-        parks: []
+        parks: [],
+        search: ""
     }
+
+    
+
     async componentDidMount() {
         await this.fetchParks()
+        
     }
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
         this.setState({ parks: response.data })
     }
+    updateSearch(event) {
+        this.setState({search: event.target.value.substr(0, 2)})
+    }
 
+
+
+
+    
     render() {
-
+        const parkProps = this.state.parks
+       
+        // console.log(parkProps)
+        // ReactDOM.render(
+        //     parkProps,
+        //     document.getElementById('root')
+        // )
+        // const filteredParks = this.state.parks.filter()
         const parkContent = this.state.parks.map((park, i) => {
             return (
                 <div key={i}>
                     <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
                     <span>- Located in: {park.states}</span>
                     <br></br><br></br>
+                   
                 </div>
             )
         })
@@ -74,11 +96,20 @@ export default class AllParks extends Component {
                 <Header><h1>National Parks</h1>
                     <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
                 <PageBody>
+                <WishList parkProps={parkProps} >
+                </WishList>
+                
+                <input type="text" value={this.state.search}
+                onChange={this.updateSearch.bind(this)}
+                />
                     <BodyText>
                         {parkContent}
                     </BodyText>
                 </PageBody>
+                {/* <AllParks parkProps={parkProps} /> */}
             </div>
         )
     }
 }
+
+

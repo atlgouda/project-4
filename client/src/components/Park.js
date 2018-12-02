@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
+import WishList from './WishList';
 
 const StyledButton = styled.div`
     background-color: #7FD1F7;
@@ -56,10 +57,10 @@ export default class Park extends Component {
        wishListParks.push(parkToPush)
        this.setState({wishListParks}) 
     }
-    addParkToWishList = async (event) => {
-        event.preventDefault()
-        this.props.addParkToArrayWishList(this.state.wishListParks)
-    }
+    // addParkToWishList = async (event) => {
+    //     event.preventDefault()
+    //     this.props.addParkToArrayWishList(this.state.wishListParks)
+    // }
 
     fetchOnePark = async (parkCode) => {
         const response = await axios.get(`/api/parks/${parkCode}`)
@@ -74,17 +75,7 @@ export default class Park extends Component {
                     <h1>{park.name}</h1>
                     <StyledButton><Link to='/parks'>Back to All Parks</Link></StyledButton>
                 </Header>
-                <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><input class="fa fa-search"></input></button>
-    </form>
-  </div>
-</div>
+                
                 <PageBody>
                     <br></br>
                     <BodyText>
@@ -95,6 +86,7 @@ export default class Park extends Component {
                         <button onClick={() => { this.handleWishListPark() }}>Add this park to Wish List</button>
                     </BodyText>
                 </PageBody>
+            <WishList name={"Gouda"} park={park}/>
             </div>
         )
     }

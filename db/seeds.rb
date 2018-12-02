@@ -19,6 +19,20 @@ qing = User.create(
     state: "NY",
     photo_url: "https://i.imgur.com/V8wgCwg.png"
 )
+adam = Park.create(
+    states: "MA",
+    latLong: "lat:42.2553961, long:-71.01160356",
+    description: "From the sweet little farm at the foot of Penn’s Hill to the gentleman’s country estate at Peace field, Adams National Historical Park is the story of “heroes, statesman, philosophers … and learned women” whose ideas and actions helped to transform thirteen disparate colonies into one united nation.",
+    # "designation": "National Historical Park",
+    parkCode: "adam",
+    # "id": "E4C7784E-66A0-4D44-87D0-3E072F5FEF43",
+    # "directionsInfo": "Traveling on U.S. Interstate 93, take exit 7 - Route 3 South to Braintree and Cape Cod. Take the first exit off Route 3 south - exit 19 - and follow signs toward Quincy Center. Continue straight on Burgin Parkway through six traffic lights. At the seventh traffic light, turn right onto Dimmock Street. Follow Dimmock Street one block and turn right onto Hancock Street. The National Park Service Visitor Center, located at 1250 Hancock Street on your left.  Validated parking is in the garage to the rear.",
+    # "directionsUrl": "http://www.nps.gov/adam/planyourvisit/directions.htm",
+    fullName: "Adams National Historical Park",
+    url: "https://www.nps.gov/adam/index.htm",
+    # "weatherInfo": "Be prepared for hot, humid weather.  The historic homes are not air conditioned.\n\nWhile the visitor center remains open all year, the historic homes are closed from November 11 through April 18.",
+    name: "Adams"
+)
 afam = Park.create(
     states: "DC",
     latLong: "lat:38.916554, long:-77.025977",
@@ -269,7 +283,7 @@ blca= Park.create(
     description: "Big enough to be overwhelming, still intimate enough to feel the pulse of time, Black Canyon of the Gunnison exposes you to some of the steepest cliffs, oldest rock, and craggiest spires in North America. With two million years to work, the Gunnison River, along with the forces of weathering, has sculpted this vertical wilderness of rock, water, and sky.",
     # "designation": "National Park",
     parkCode: "blca",
-    id: "BDBD573F-97EF-44E7-A579-471679F2C42A",
+    # id: "BDBD573F-97EF-44E7-A579-471679F2C42A",
     # "directionsInfo": "7 miles north on CO Highway 347 from the intersection with U.S. Highway 50 east of Montrose",
     # "directionsUrl": "http://www.nps.gov/blca/planyourvisit/directions.htm",
     fullName: "Black Canyon Of The Gunnison National Park",

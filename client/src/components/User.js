@@ -64,7 +64,7 @@ export default class User extends Component {
     this.setState({ user })
   }
   handleDelete = async (userId) => {
-    const deleteResponse = await axios.delete(`/api/users/${userId}`)
+    // const deleteResponse = await axios.delete(`/api/users/${userId}`)
     this.goBack()
   }
   goBack = () => {
@@ -80,8 +80,8 @@ export default class User extends Component {
     this.setState({ user })
   }
   handleUpdate = async (event) => {
-    const userId = this.props.match.params.id
-    const response = await axios.put(`/api/users/${userId}`, this.state.user)
+    // const userId = this.props.match.params.id
+    // const response = await axios.put(`/api/users/${userId}`, this.state.user)
     const user = this.state.user
     this.setState({ user })
   }

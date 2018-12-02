@@ -1,23 +1,20 @@
 import React, { Component } from 'react'
-import Park from './Park';
+// import Park from './Park';
 
 export default class WishList extends Component {
     state = {
         wishListParks: []
     }
   render() {
-      const wishListParks = this.state.wishListParks.map((Park, i => {
-          return (
-              <Park
-              key={i}
-              indexFromWishListParks={i}
-              Park={Park} />
-          )
-      }))
+      console.log(this.props.parkProps)
+      // const parkProps = {parkProps}
     return (
       <div>
-        <h1>Wish List Parks</h1>
-        {wishListParks}
+        <h4>Wish List Parks:</h4>
+        {/* <ul>
+          {this.props.parkProps.map((name) = <li>{name}</li>)}
+        </ul> */}
+        {/* {wishList} */}
       </div>
     )
   }
