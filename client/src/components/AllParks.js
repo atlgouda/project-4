@@ -32,9 +32,21 @@ const BodyText = styled.div`
     margin-right: 10%;
     border-bottom: 1px solid black;
 `
+const HeaderBox = styled.div`
+    background-color: white;
+    opacity: .5;
+    border: 5px solid black;
+    border-radius: 15px;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+`
 const Header = styled.div`
-    background-color: #829B86;
-    min-height: 15vh;
+    background-image: url("https://i.imgur.com/qSXIZpF.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 30vh;
+
     padding: 20px;
     text-align: center;
     >h1 {
@@ -93,9 +105,13 @@ export default class AllParks extends Component {
         })
         return (
             <div>
-                <Header><h1>National Parks</h1>
-                    <StyledButton><Link to='/'>Home Page</Link></StyledButton></Header>
+                <Header>
+                    <HeaderBox><h1>National Parks</h1>
+                   
+                    </HeaderBox>
+                    </Header>
                 <PageBody>
+                <StyledButton><Link to='/'>Home Page</Link></StyledButton>
                 <WishList parkProps={parkProps} >
                 </WishList>
                 

@@ -24,8 +24,11 @@ const BodyText = styled.div`
     margin-right: 10%;
 `
 const Header = styled.div`
-    background-color: #829B86;
-    min-height: 15vh;
+    background-image: url("https://i.imgur.com/YfUThYB.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 30vh;
+
     padding: 20px;
     text-align: center;
     >h1 {
