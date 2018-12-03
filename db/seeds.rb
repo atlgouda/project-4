@@ -1295,6 +1295,20 @@ drto = Park.create(
     # "weatherInfo": "During the summer public access season from May to September, the weather is typical of the mid-Atlantic region. Thunderstorms can come quickly with short downpours. There may be extended periods of heat or humidity that might last a week or more. The island is generally a few degrees cooler than the city due to the fairly constant breeze.",
     name: "Governors Island"
     )
+    grca = Park.create(
+        states: "AZ",
+      latLong: "lat:36.17280161, long:-112.6836024",
+      description: "Unique combinations of geologic color and erosional forms decorate a canyon that is 277 river miles (446km) long, up to 18 miles (29km) wide, and a mile (1.6km) deep. Grand Canyon overwhelms our senses through its immense size.\n\nThe South Rim is open all year\n \nThe North Rim is closed for the winter. It will reopen on May 15, 2019.",
+      designation: "National Park",
+      parkCode: "grca",
+    #   "id": "B7FF43E5-3A95-4C8E-8DBE-72D8608D6588",
+    #   "directionsInfo": "South Rim: Open all year, is located 60 miles north of Williams, Arizona (via route 64 from Interstate 40) and 80 miles northwest of Flagstaff (via route 180). Grand Canyon lies entirely within the state of Arizona.\n\n North Rim: located 30 miles south of Jacob Lake on Highway 67; the actual rim of the canyon is an additional 14 miles south. Jacob Lake, AZ is located in northern Arizona on Highway 89A, not far from the Utah border.",
+    #   "directionsUrl": "http://www.nps.gov/grca/planyourvisit/directions.htm",
+      fullName: "Grand Canyon National Park",
+      url: "https://www.nps.gov/grca/index.htm",
+    #   "weatherInfo": "This weather varies with cold winters and mild pleasant summers, moderate humidity, and considerable diurnal temperature changes at the higher elevations, with hot and drier summers at the bottom of the Grand Canyon along with cool damp winters. Summer thunderstorms and winter snowfall adds to the weather variety in this region.",
+      name: "Grand Canyon"
+    )
    grko = Park.create(
     states: "MT",
     latLong: "lat:46.41358923, long:-112.7467024",
