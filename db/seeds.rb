@@ -2863,7 +2863,7 @@ drto = Park.create(
     url: "https://www.nps.gov/yuch/index.htm",
     # weatherInfo": "The area that Yukon-Charley Rivers encompasses is generally classified as sub-arctic, with exceptionally cold winters, relatively warm summers, low annual precipitation, and generally high winds.",
     name: "Yukon - Charley Rivers"
-  }
+   )
 cuis = Park.create(
     states: "GA",
     latLong: "lat:30.85857484, long:-81.45253575",
