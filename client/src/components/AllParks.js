@@ -66,26 +66,29 @@ export default class AllParks extends Component {
         search: ""
     }
 
-    
-
     async componentDidMount() {
         await this.fetchParks()
-        
+        // await this.propParks()
     }
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
         this.setState({ parks: response.data })
     }
+    // propParks = async () => {
+    //     const response = await axios.get('/api/parks')
+    //     this.props.parks = ({parks: response.data })
+    // }
     updateSearch(event) {
         this.setState({search: event.target.value.substr(0, 2)})
     }
 
-
-
-
-    
     render() {
-        const parkProps = this.state.parks
+        const parkProps = this.state.parks.filter(
+            (park) => {
+                return park.states.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+                
+            }
+        )
        
         // console.log(parkProps)
         // ReactDOM.render(
@@ -93,7 +96,7 @@ export default class AllParks extends Component {
         //     document.getElementById('root')
         // )
         // const filteredParks = this.state.parks.filter()
-        const parkContent = this.state.parks.map((park, i) => {
+        const parkContent = parkProps.map((park, i) => {
             return (
                 <div key={i}>
                     <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
@@ -115,9 +118,9 @@ export default class AllParks extends Component {
                 <WishList parkProps={parkProps} >
                 </WishList>
                 
-                <input type="text" value={this.state.search}
+                Search by state abbreviation: <input type="text" value={this.state.search}
                 onChange={this.updateSearch.bind(this)}
-                />
+                /> 
                     <BodyText>
                         {parkContent}
                     </BodyText>
@@ -127,5 +130,6 @@ export default class AllParks extends Component {
         )
     }
 }
-
+// const parkProps = this.state.parks
+// React.render(<AllParks SecondParkProps = {parkProps} />, document.getElementById('allparks'));
 

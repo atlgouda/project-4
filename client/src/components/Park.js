@@ -28,11 +28,10 @@ const Header = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 30vh;
-
     padding: 20px;
     text-align: center;
     >h1 {
-        color: #414C60;
+        color: black;
         font-size: 40px;
         font-family: 'Courier New', Courier, monospace;
     }
@@ -74,6 +73,7 @@ export default class Park extends Component {
         const park = this.state.park
         return (
             <div>
+               
                 <Header>
                     <h1>{park.name}</h1>
                     <StyledButton><Link to='/parks'>Back to All Parks</Link></StyledButton>
