@@ -875,7 +875,7 @@ drto = Park.create(
     name: "El Malpais"
     )
    elis = Park.create(
-    states": "NJ,NY,
+    states: "NJ,NY",
     latLong: "lat:40.69946, long:-74.0401",
     description: "How far would you travel to find a better life? What if the journey took weeks under difficult conditions?  If you answered \"Whatever it takes,\" you echo the feelings of the 12 million immigrants who passed through these now quiet halls from 1892 to 1954. Ellis Island afforded them the opportunity to attain the American dream for themselves and their descendants. Come hear their stories.",
     # "designation": "Part of Statue of Liberty National Monument",
