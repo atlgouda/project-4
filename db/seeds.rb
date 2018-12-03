@@ -1299,7 +1299,7 @@ drto = Park.create(
         states: "AZ",
       latLong: "lat:36.17280161, long:-112.6836024",
       description: "Unique combinations of geologic color and erosional forms decorate a canyon that is 277 river miles (446km) long, up to 18 miles (29km) wide, and a mile (1.6km) deep. Grand Canyon overwhelms our senses through its immense size.\n\nThe South Rim is open all year\n \nThe North Rim is closed for the winter. It will reopen on May 15, 2019.",
-      designation: "National Park",
+    #   designation: "National Park",
       parkCode: "grca",
     #   "id": "B7FF43E5-3A95-4C8E-8DBE-72D8608D6588",
     #   "directionsInfo": "South Rim: Open all year, is located 60 miles north of Williams, Arizona (via route 64 from Interstate 40) and 80 miles northwest of Flagstaff (via route 180). Grand Canyon lies entirely within the state of Arizona.\n\n North Rim: located 30 miles south of Jacob Lake on Highway 67; the actual rim of the canyon is an additional 14 miles south. Jacob Lake, AZ is located in northern Arizona on Highway 89A, not far from the Utah border.",
