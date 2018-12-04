@@ -6,7 +6,7 @@ export default class WishList extends Component {
         wishListParks: []
     }
   render() {
-      console.log(this.props.parkProps)
+      // console.log(this.props.parkProps)
       // const parkProps = {parkProps}
     return (
       <div>

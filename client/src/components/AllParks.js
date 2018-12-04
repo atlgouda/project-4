@@ -61,10 +61,14 @@ const PageBody = styled.div`
     padding: 40px;
 `
 export default class AllParks extends Component {
-    state = {
+    constructor(props){
+        super(props);
+        this.state = {
         parks: [],
+        wishListParks: [],
         search: ""
-    }
+    };
+}
 
     async componentDidMount() {
         await this.fetchParks()
@@ -73,6 +77,17 @@ export default class AllParks extends Component {
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
         this.setState({ parks: response.data })
+    }
+    onAddPark = () => {
+        this.setState(state => {
+            const wishListParks = state.wishListParks.concat(state.value)
+            console.log(wishListParks)
+            // const wishListParks = this.state.wishListParks
+            // this.setState({ arr: [...this.state.arr, ...wishListParks]})
+            return {
+                wishListParks
+            }
+        })
     }
     // propParks = async () => {
     //     const response = await axios.get('/api/parks')
@@ -101,6 +116,8 @@ export default class AllParks extends Component {
                 <div key={i}>
                     <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
                     <span>- Located in: {park.states}</span>
+                    <button type="button"
+                    onClick={this.onAddPark}>Add to Wish List</button>
                     <br></br><br></br>
                    
                 </div>
