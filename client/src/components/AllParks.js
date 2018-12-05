@@ -170,6 +170,7 @@ export default class AllParks extends Component {
         const response = await axios.get('/api/parks')
         this.setState({ parks: response.data })
     }
+
     onAddPark = (park) => {
 
         this.setState(prevState => ({
@@ -260,7 +261,8 @@ export default class AllParks extends Component {
                         {/* <span className="closebtn" onclick="this.parentElement.display='none';">×</span> */}
                         <div className="callout-container">
                         <div>
-                         {wishListContent}<br></br>
+                         {wishListContent}
+                         <br></br>
                          </div>
                         </div>
                         </div>

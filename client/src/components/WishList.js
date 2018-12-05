@@ -11,6 +11,7 @@ export default class WishList extends Component {
     return (
       <div>
         <h4>Wish List Parks:</h4>
+
         {/* <ul>
           {this.props.parkProps.map((name) = <li>{name}</li>)}
         </ul> */}
