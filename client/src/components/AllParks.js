@@ -177,6 +177,7 @@ export default class AllParks extends Component {
                     <Footer>
                     <span><p>Website created by: Gouda Clark
                       <a 
+                      target="_blank" rel="noopener noreferrer"
                       href="https://www.linkedin.com/in/gouda-clark/"
                       > 
                         <img className="linkedIn" 
