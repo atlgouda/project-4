@@ -15,6 +15,7 @@ const StyledButton = styled.div`
     text-align: center;
     border-radius: 35px;
     padding: 10px;
+    opacity: .7;
     a{
         text-decoration: none;
     }
@@ -22,12 +23,20 @@ const StyledButton = styled.div`
 const BodyText = styled.div`
     margin-left: 10%;
     margin-right: 20%;
+    font-family: 'Nunito', sans-serif;
     >img {
         max-height: 60px;
     }
     .parkSite {
         text-decoration: none;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 3px;
     }
+    /* .carrot {
+        padding: 10px 5px 10px 0px;
+        font-size: 5vh;
+    } */
 `
 const Footer = styled.div`
     position: fixed;
@@ -106,10 +115,10 @@ export default class Park extends Component {
                 <PageBody>
                     <br></br>
                     <BodyText>
-                        <h2>{park.fullName}</h2>
-                        {/* <p>State: {park.states}</p> */}
+                        <h3>{park.fullName}</h3>
+                        <p>State: {park.states}</p>
                         {/* <img src="https://i.imgur.com/ezzGmB8.png" /> */}
-                        <p><h3>About:</h3> {park.description}</p>
+                        <p><h4>About:</h4> {park.description}</p>
                         <p><a className="parkSite" target="_blank" rel="noopener noreferrer" href={park.url}>Official {park.name} website</a></p><br></br>
                         {/* <button onClick={() => { this.handleWishListPark() }}>Add this park to Wish List</button> */}
                     </BodyText>

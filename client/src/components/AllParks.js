@@ -11,12 +11,14 @@ const ParkName = styled.div`
     a{
         text-decoration: none;
         font-size: 3vh;
+        color: darkslategray;
     }
 `
 const Search = styled.div`
     background-color: skyblue;
     font-size: 17px;
-    /* opacity: .8; */
+    opacity: .8;
+    border: 2px solid black;
     padding: 5px;
     padding-bottom: 10px;
     max-width: 200px;
@@ -43,6 +45,7 @@ const Search = styled.div`
 const BodyText = styled.div`
     margin-left: 10%;
     margin-right: 10%;
+    font-family: 'Nunito', sans-serif;
 `
 const HeaderBox = styled.div`
     background-color: white;
@@ -52,6 +55,7 @@ const HeaderBox = styled.div`
     max-width: 400px;
     margin-right: auto;
     margin-left: auto;
+    font-family: 'Nunito', sans-serif;
 `
 const Footer = styled.div`
     position: fixed;
@@ -89,6 +93,11 @@ const PageBody = styled.div`
     background-color: papayawhip;
     min-height: 85vh;
     padding: 40px;
+    .locatedIn {
+        font-size: 12px;
+        color: #3B7302;
+    }
+    
 `
 export default class AllParks extends Component {
     constructor(props){
@@ -146,11 +155,23 @@ export default class AllParks extends Component {
         //     document.getElementById('root')
         // )
         // const filteredParks = this.state.parks.filter()
-        const parkContent = parkProps.map((park, i) => {
+        const wishListContent = this.state.wishListParks.map((park, i) => {
             return (
                 <div key={i}>
+                    {park.name}
+                    <br></br>
+                </div>
+            
+            )
+        })
+
+        const parkContent = parkProps.map((park, i) => {
+            return (
+
+
+                <div key={i}>
                     <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
-                    <span>- Located in: {park.states}</span> <br></br>
+                    <span className='locatedIn'>LOCATED IN: {park.states}</span> <br></br>
                     <div 
                   
                      onClick={() => this.onAddPark(park)}
@@ -180,6 +201,8 @@ export default class AllParks extends Component {
                 
                 
                     <BodyText>
+                        <h2>Wish List</h2>
+                        <p>{wishListContent}</p>
                         {parkContent}
                     </BodyText>
                     <Footer>
