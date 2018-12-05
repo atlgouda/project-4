@@ -109,15 +109,20 @@ export default class AllParks extends Component {
         this.setState({ parks: response.data })
     }
     onAddPark = (park) => {
-        this.setState(state => {
-            const wishListParks = state.wishListParks.concat(state.park)
-            console.log(wishListParks)
-            // const wishListParks = this.state.wishListParks
-            // this.setState({ arr: [...this.state.arr, ...wishListParks]})
-            return {
-                wishListParks
-            }
-        })
+
+        this.setState(prevState => ({
+            wishListParks: [...prevState.wishListParks, park]
+        }))
+
+        // this.setState(state => {
+        //     const wishListParks = state.wishListParks.concat(state.park)
+        //     console.log(wishListParks)
+        //     // const wishListParks = this.state.wishListParks
+        //     // this.setState({ arr: [...this.state.arr, ...wishListParks]})
+        //     return {
+        //         wishListParks
+        //     }
+        // })
     }
     // propParks = async () => {
     //     const response = await axios.get('/api/parks')
@@ -145,9 +150,11 @@ export default class AllParks extends Component {
             return (
                 <div key={i}>
                     <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
-                    <span>- Located in: {park.states}</span>
-                    {/* <button type="button" */}
-                    {/* onClick={this.onAddPark}>Add to Wish List</button> */}
+                    <span>- Located in: {park.states}</span> <br></br>
+                    <div 
+                  
+                     onClick={() => this.onAddPark(park)}
+                     value={park}>Add to Wish List</div>
                     <br></br><br></br>
                    
                 </div>
@@ -166,6 +173,7 @@ export default class AllParks extends Component {
                     </Search>
                     </Header>
                 <PageBody>
+                {/* WishList: {this.state.wishListParks.map().name} */}
                 {/* <StyledButton><Link to='/'>Home Page</Link></StyledButton> */}
                 {/* <WishList parkProps={parkProps} > */}
                 {/* </WishList> */}
