@@ -6,6 +6,10 @@ import axios from 'axios'
 import styled from 'styled-components'
 import WishList from './WishList';
 
+
+
+
+
 const ParkName = styled.div`
     font-size: 15px;
     a{
@@ -46,7 +50,42 @@ const BodyText = styled.div`
     margin-left: 10%;
     margin-right: 10%;
     font-family: 'Nunito', sans-serif;
-`
+
+    .callout {
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    margin-left: 20px;
+    max-width: 300px;
+    border-radius: 15px;
+    }
+  .callout-header {
+    padding: 25px 15px;
+    background: #555;
+    font-size: 30px;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .callout-container {
+    padding: 15px;
+    background-color: #ccc;
+    color: black
+  }
+  
+  .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .closebtn:hover {
+    color: lightgrey;
+  }
+  `
 const HeaderBox = styled.div`
     background-color: white;
     opacity: .5;
@@ -89,6 +128,7 @@ const Header = styled.div`
         font-family: 'Courier New', Courier, monospace;
     }
 `
+
 const PageBody = styled.div`
     background-color: papayawhip;
     min-height: 85vh;
@@ -97,6 +137,19 @@ const PageBody = styled.div`
         font-size: 12px;
         color: #3B7302;
     }
+    .addToWL {
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 10px;
+        margin-left: 0px;
+        background-color: #E5D7BF;
+        /* background-color: #FFF3E1; */
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.5s;
+        overflow: hidden;
+}
+
     
 `
 export default class AllParks extends Component {
@@ -171,11 +224,11 @@ export default class AllParks extends Component {
 
                 <div key={i}>
                     <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
-                    <span className='locatedIn'>LOCATED IN: {park.states}</span> <br></br>
-                    <div 
+                    <span className='locatedIn'>LOCATED IN: {park.states}</span><br></br>
+                    <span className='addToWL'
                   
                      onClick={() => this.onAddPark(park)}
-                     value={park}>Add to Wish List</div>
+                     value={park}>Add to Wish List</span>
                     <br></br><br></br>
                    
                 </div>
@@ -201,8 +254,19 @@ export default class AllParks extends Component {
                 
                 
                     <BodyText>
-                        <h2>Wish List</h2>
-                        <p>{wishListContent}</p>
+                    
+                        <div className="callout">
+                        <div className="callout-header">Wish List</div>
+                        <span className="closebtn" onclick="this.parentElement.display='none';">×</span>
+                        <div className="callout-container">
+                        <p>
+                         {wishListContent}
+                         </p>
+                        </div>
+                        </div>
+                    
+                        {/* <h2>Wish List</h2> */}
+                        {/* <p>{wishListContent}</p> */}
                         {parkContent}
                     </BodyText>
                     <Footer>
