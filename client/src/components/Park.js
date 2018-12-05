@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
-// import WishList from './WishList';
 
 const StyledButton = styled.div`
     background-color: #7FD1F7;
@@ -41,10 +40,6 @@ const BodyText = styled.div`
         color: #3B7302;
         font-weight: bold;
     }
-    /* .carrot {
-        padding: 10px 5px 10px 0px;
-        font-size: 5vh;
-    } */
 `
 const Footer = styled.div`
     position: fixed;
@@ -81,7 +76,6 @@ const PageBody = styled.div`
     background-color: papayawhip;
     min-height: 85vh;
 `
-
 export default class Park extends Component {
     state = {
         park: {},
@@ -96,14 +90,10 @@ export default class Park extends Component {
 
     handleWishListPark = async () => {
         const parkToPush = this.state.park
-       const wishListParks = [...this.state.wishListParks]
-       wishListParks.push(parkToPush)
-       this.setState({wishListParks}) 
+        const wishListParks = [...this.state.wishListParks]
+        wishListParks.push(parkToPush)
+        this.setState({ wishListParks })
     }
-    // addParkToWishList = async (event) => {
-    //     event.preventDefault()
-    //     this.props.addParkToArrayWishList(this.state.wishListParks)
-    // }
 
     fetchOnePark = async (parkCode) => {
         const response = await axios.get(`/api/parks/${parkCode}`)
@@ -114,37 +104,30 @@ export default class Park extends Component {
         const park = this.state.park
         return (
             <div>
-               
                 <Header>
                     <h1>{park.name}</h1>
                     <StyledButton><Link to='/parks'>Back to All Parks</Link></StyledButton>
                 </Header>
-                
                 <PageBody>
                     <br></br>
                     <BodyText>
                         <h3>{park.fullName}</h3>
                         <span className='locatedIn'>LOCATED IN: {park.states}</span>
-                        {/* <img src="https://i.imgur.com/ezzGmB8.png" /> */}
                         <h4>About:</h4> {park.description}
                         <p className="siteButton"><a className="parkSite" target="_blank" rel="noopener noreferrer" href={park.url}>Official {park.name} website</a></p><br></br>
-                        {/* <button onClick={() => { this.handleWishListPark() }}>Add this park to Wish List</button> */}
                     </BodyText>
                     <Footer>
-                    <span><p>Website created by: Gouda Clark
-                      <a 
-                      target="_blank" rel="noopener noreferrer"
-                      href="https://www.linkedin.com/in/gouda-clark/"
-                      > 
-                        <img className="linkedIn" alt="linkedInLogo"
-                        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                        />
-                       </a> 
+                        <span><p>Website created by: Gouda Clark
+                      <a
+                                target="_blank" rel="noopener noreferrer"
+                                href="https://www.linkedin.com/in/gouda-clark/">
+                                <img className="linkedIn" alt="linkedInLogo"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
+                            </a>
                         </p>
                         </span>
                     </Footer>
                 </PageBody>
-            {/* <WishList name={"Gouda"} park={park}/> */}
             </div>
         )
     }

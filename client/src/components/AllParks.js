@@ -1,14 +1,8 @@
 
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-// import ReactDOM from 'react-dom'
 import axios from 'axios'
 import styled from 'styled-components'
-// import WishList from './WishList';
-
-
-
-
 
 const ParkName = styled.div`
     font-size: 15px;
@@ -30,22 +24,7 @@ const Search = styled.div`
     margin-right: auto;
     margin-top: 5vh;
     border-radius: 3px;
-    
 `
-// const StyledButton = styled.div`
-//     background-color: #7FD1F7;
-//     font-size: 20px;
-//     max-width: 200px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     margin-bottom: 40px;
-//     text-align: center;
-//     border-radius: 35px;
-//     padding: 10px;
-//     a{
-//         text-decoration: none;
-//     }
-// `
 const BodyText = styled.div`
     margin-left: 10%;
     margin-right: 10%;
@@ -67,13 +46,11 @@ const BodyText = styled.div`
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-  
   .callout-container {
     padding: 15px;
     background-color: #ccc;
     color: black
   }
-  
   .closebtn {
     position: absolute;
     top: 5px;
@@ -143,28 +120,24 @@ const PageBody = styled.div`
         border-radius: 10px;
         margin-left: 0px;
         background-color: #E5D7BF;
-        /* background-color: #FFF3E1; */
         cursor: pointer;
         -webkit-transition-duration: 0.4s; /* Safari */
         transition-duration: 0.5s;
         overflow: hidden;
 }
-
-    
 `
 export default class AllParks extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-        parks: [],
-        wishListParks: [],
-        search: ""
-    };
-}
+            parks: [],
+            wishListParks: [],
+            search: ""
+        };
+    }
 
     async componentDidMount() {
         await this.fetchParks()
-        // await this.propParks()
     }
     fetchParks = async () => {
         const response = await axios.get('/api/parks')
@@ -172,66 +145,36 @@ export default class AllParks extends Component {
     }
 
     onAddPark = (park) => {
-
         this.setState(prevState => ({
             wishListParks: [...prevState.wishListParks, park]
         }))
-
-        // this.setState(state => {
-        //     const wishListParks = state.wishListParks.concat(state.park)
-        //     console.log(wishListParks)
-        //     // const wishListParks = this.state.wishListParks
-        //     // this.setState({ arr: [...this.state.arr, ...wishListParks]})
-        //     return {
-        //         wishListParks
-        //     }
-        // })
     }
-    // propParks = async () => {
-    //     const response = await axios.get('/api/parks')
-    //     this.props.parks = ({parks: response.data })
-    // }
     updateSearch(event) {
-        this.setState({search: event.target.value.substr(0, 2)})
+        this.setState({ search: event.target.value.substr(0, 2) })
     }
-
     render() {
         const parkProps = this.state.parks.filter(
             (park) => {
                 return park.states.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
-                
             }
         )
-       
-        // console.log(parkProps)
-        // ReactDOM.render(
-        //     parkProps,
-        //     document.getElementById('root')
-        // )
-        // const filteredParks = this.state.parks.filter()
         const wishListContent = this.state.wishListParks.map((park, i) => {
             return (
                 <div key={i}>
                     {park.name}
                     <br></br>
                 </div>
-            
             )
         })
-
         const parkContent = parkProps.map((park, i) => {
             return (
-
-
                 <div key={i}>
                     <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
                     <span className='locatedIn'>LOCATED IN: {park.states}</span><br></br>
                     <span className='addToWL'
-                  
-                     onClick={() => this.onAddPark(park)}
-                     value={park}>Add to Wish List</span>
+                        onClick={() => this.onAddPark(park)}
+                        value={park}>Add to Wish List</span>
                     <br></br><br></br>
-                   
                 </div>
             )
         })
@@ -239,57 +182,41 @@ export default class AllParks extends Component {
             <div>
                 <Header>
                     <HeaderBox><h1>National Parks</h1>
-                   
                     </HeaderBox>
                     <Search>
-                    Search by state abbreviation: <input type="text" value={this.state.search}
-                onChange={this.updateSearch.bind(this)}
-                /> 
+                        Search by state abbreviation: <input type="text" value={this.state.search}
+                            onChange={this.updateSearch.bind(this)}
+                        />
                     </Search>
-                    </Header>
+                </Header>
                 <PageBody>
-                {/* WishList: {this.state.wishListParks.map().name} */}
-                {/* <StyledButton><Link to='/'>Home Page</Link></StyledButton> */}
-                {/* <WishList parkProps={parkProps} > */}
-                {/* </WishList> */}
-                
-                
                     <BodyText>
-                    
                         <div className="callout">
-                        <div className="callout-header">Park Wish List</div>
-                        {/* <span className="closebtn" onclick="this.parentElement.display='none';">×</span> */}
-                        <div className="callout-container">
-                        <div>
-                         {wishListContent}
-                         <br></br>
-                         </div>
+                            <div className="callout-header">Park Wish List</div>
+                            <div className="callout-container">
+                                <div>
+                                    {wishListContent}
+                                    <br></br>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    
-                        {/* <h2>Wish List</h2> */}
-                        {/* <p>{wishListContent}</p> */}
                         {parkContent}
                     </BodyText>
                     <Footer>
-                    <span><p>Website created by: Gouda Clark
-                      <a 
-                      target="_blank" rel="noopener noreferrer"
-                      href="https://www.linkedin.com/in/gouda-clark/"
-                      > 
-                        <img className="linkedIn" alt="linkedInLogo"
-                        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-                        />
-                       </a> 
+                        <span><p>Website created by: Gouda Clark
+                      <a
+                                target="_blank" rel="noopener noreferrer"
+                                href="https://www.linkedin.com/in/gouda-clark/"
+                            >
+                                <img className="linkedIn" alt="linkedInLogo"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                                />
+                            </a>
                         </p>
                         </span>
                     </Footer>
                 </PageBody>
-                {/* <AllParks parkProps={parkProps} /> */}
             </div>
         )
     }
 }
-// const parkProps = this.state.parks
-// React.render(<AllParks SecondParkProps = {parkProps} />, document.getElementById('allparks'));
-

@@ -62,29 +62,24 @@ const Splash = styled.div`
 `
 
 export default class HomePage extends Component {
-  render() {
-    return (
-      <Splash>
-        <SplashBox>
-        <SplashText>
-            <h1>National Parks Guide</h1>
-            <StyledButton><Link to='/parks'>Park List</Link></StyledButton>
-        </SplashText>
-
-        </SplashBox>
-        <SplashQuote> 
-        <div class="w3-container">
-  <div class="w3-panel w3-leftbar w3-light-grey">
-    <p class="w3-xlarge w3-serif"><i>"It's pointless for a human to paint scenes of nature when they can go outside and stand in it."</i></p>
-    <p>Ron Swanson</p>
-  </div>
-</div>
-            {/* <blockquote class="ron">
-        It's pointless for a human to paint scenes of nature when they can go outside and stand in it.
-        </blockquote> */}
-
-       </SplashQuote>
-      </Splash>
-    )
-  }
+    render() {
+        return (
+            <Splash>
+                <SplashBox>
+                    <SplashText>
+                        <h1>National Parks Guide</h1>
+                        <StyledButton><Link to='/parks'>Park List</Link></StyledButton>
+                    </SplashText>
+                </SplashBox>
+                <SplashQuote>
+                    <div class="w3-container">
+                        <div class="w3-panel w3-leftbar w3-light-grey">
+                            <p class="w3-xlarge w3-serif"><i>"It's pointless for a human to paint scenes of nature when they can go outside and stand in it."</i></p>
+                            <p>Ron Swanson</p>
+                        </div>
+                    </div>
+               </SplashQuote>
+            </Splash>
+        )
+    }
 }
