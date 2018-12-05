@@ -13,24 +13,36 @@ const ParkName = styled.div`
         font-size: 3vh;
     }
 `
-const StyledButton = styled.div`
-    background-color: #7FD1F7;
-    font-size: 20px;
+const Search = styled.div`
+    background-color: skyblue;
+    font-size: 17px;
+    /* opacity: .8; */
+    padding: 5px;
+    padding-bottom: 10px;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
-    text-align: center;
-    border-radius: 35px;
-    padding: 10px;
-    a{
-        text-decoration: none;
-    }
+    margin-top: 5vh;
+    border-radius: 3px;
+    
 `
+// const StyledButton = styled.div`
+//     background-color: #7FD1F7;
+//     font-size: 20px;
+//     max-width: 200px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-bottom: 40px;
+//     text-align: center;
+//     border-radius: 35px;
+//     padding: 10px;
+//     a{
+//         text-decoration: none;
+//     }
+// `
 const BodyText = styled.div`
     margin-left: 10%;
     margin-right: 10%;
-    border-bottom: 1px solid black;
 `
 const HeaderBox = styled.div`
     background-color: white;
@@ -41,14 +53,32 @@ const HeaderBox = styled.div`
     margin-right: auto;
     margin-left: auto;
 `
+const Footer = styled.div`
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    opacity: .9;
+    color: white;
+    text-align: center;
+    .linkedIn {
+        max-height: 30px;
+        padding-left: 15px;
+        margin-bottom: -7px;
+    }
+`
 const Header = styled.div`
     background-image: url("https://i.imgur.com/qSXIZpF.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 30vh;
-
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     padding: 20px;
     text-align: center;
+    border-bottom: 10px solid #2F353B;
     >h1 {
         color: #414C60;
         font-size: 40px;
@@ -78,9 +108,9 @@ export default class AllParks extends Component {
         const response = await axios.get('/api/parks')
         this.setState({ parks: response.data })
     }
-    onAddPark = () => {
+    onAddPark = (park) => {
         this.setState(state => {
-            const wishListParks = state.wishListParks.concat(state.value)
+            const wishListParks = state.wishListParks.concat(state.park)
             console.log(wishListParks)
             // const wishListParks = this.state.wishListParks
             // this.setState({ arr: [...this.state.arr, ...wishListParks]})
@@ -116,8 +146,8 @@ export default class AllParks extends Component {
                 <div key={i}>
                     <ParkName><Link to={`/parks/${park.id}`}>{park.fullName}</Link></ParkName>
                     <span>- Located in: {park.states}</span>
-                    <button type="button"
-                    onClick={this.onAddPark}>Add to Wish List</button>
+                    {/* <button type="button" */}
+                    {/* onClick={this.onAddPark}>Add to Wish List</button> */}
                     <br></br><br></br>
                    
                 </div>
@@ -129,18 +159,33 @@ export default class AllParks extends Component {
                     <HeaderBox><h1>National Parks</h1>
                    
                     </HeaderBox>
-                    </Header>
-                <PageBody>
-                <StyledButton><Link to='/'>Home Page</Link></StyledButton>
-                <WishList parkProps={parkProps} >
-                </WishList>
-                
-                Search by state abbreviation: <input type="text" value={this.state.search}
+                    <Search>
+                    Search by state abbreviation: <input type="text" value={this.state.search}
                 onChange={this.updateSearch.bind(this)}
                 /> 
+                    </Search>
+                    </Header>
+                <PageBody>
+                {/* <StyledButton><Link to='/'>Home Page</Link></StyledButton> */}
+                {/* <WishList parkProps={parkProps} > */}
+                {/* </WishList> */}
+                
+                
                     <BodyText>
                         {parkContent}
                     </BodyText>
+                    <Footer>
+                    <span><p>Website created by: Gouda Clark
+                      <a 
+                      href="https://www.linkedin.com/in/gouda-clark/"
+                      > 
+                        <img className="linkedIn" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                        />
+                       </a> 
+                        </p>
+                        </span>
+                    </Footer>
                 </PageBody>
                 {/* <AllParks parkProps={parkProps} /> */}
             </div>

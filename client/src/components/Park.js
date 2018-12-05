@@ -22,12 +22,33 @@ const StyledButton = styled.div`
 const BodyText = styled.div`
     margin-left: 10%;
     margin-right: 10%;
+    >img {
+        max-height: 60px;
+    }
+`
+const Footer = styled.div`
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    opacity: .9;
+    color: white;
+    text-align: center;
+    .linkedIn {
+        max-height: 30px;
+        padding-left: 15px;
+        margin-bottom: -7px;
+    }
 `
 const Header = styled.div`
     background-image: url("https://i.imgur.com/YfUThYB.png");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 30vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     padding: 20px;
     text-align: center;
     >h1 {
@@ -84,12 +105,25 @@ export default class Park extends Component {
                     <BodyText>
                         <h3>{park.fullName}</h3>
                         <p>State: {park.states}</p>
+                        {/* <img src="https://i.imgur.com/ezzGmB8.png" /> */}
                         <p>About: {park.description}</p>
                         <p><a target="_blank" rel="noopener noreferrer" href={park.url}>Website</a></p><br></br>
-                        <button onClick={() => { this.handleWishListPark() }}>Add this park to Wish List</button>
+                        {/* <button onClick={() => { this.handleWishListPark() }}>Add this park to Wish List</button> */}
                     </BodyText>
+                    <Footer>
+                    <span><p>Website created by: Gouda Clark
+                      <a 
+                      href="https://www.linkedin.com/in/gouda-clark/"
+                      > 
+                        <img className="linkedIn" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                        />
+                       </a> 
+                        </p>
+                        </span>
+                    </Footer>
                 </PageBody>
-            <WishList name={"Gouda"} park={park}/>
+            {/* <WishList name={"Gouda"} park={park}/> */}
             </div>
         )
     }
