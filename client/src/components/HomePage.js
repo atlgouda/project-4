@@ -29,7 +29,7 @@ const SplashQuote = styled.div`
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
-    max-width: 250px;
+    max-width: 255px;
     padding: 5px;
     margin-top: 5vh;
     padding: 10px 20px;

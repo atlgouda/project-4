@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 // import ReactDOM from 'react-dom'
 import axios from 'axios'
 import styled from 'styled-components'
-import WishList from './WishList';
+// import WishList from './WishList';
 
 
 
@@ -256,12 +256,12 @@ export default class AllParks extends Component {
                     <BodyText>
                     
                         <div className="callout">
-                        <div className="callout-header">Wish List</div>
-                        <span className="closebtn" onclick="this.parentElement.display='none';">×</span>
+                        <div className="callout-header">Park Wish List</div>
+                        {/* <span className="closebtn" onclick="this.parentElement.display='none';">×</span> */}
                         <div className="callout-container">
-                        <p>
-                         {wishListContent}
-                         </p>
+                        <div>
+                         {wishListContent}<br></br>
+                         </div>
                         </div>
                         </div>
                     
@@ -275,7 +275,7 @@ export default class AllParks extends Component {
                       target="_blank" rel="noopener noreferrer"
                       href="https://www.linkedin.com/in/gouda-clark/"
                       > 
-                        <img className="linkedIn" 
+                        <img className="linkedIn" alt="linkedInLogo"
                         src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
                         />
                        </a> 

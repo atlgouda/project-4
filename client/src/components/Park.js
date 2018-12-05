@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
-import WishList from './WishList';
+// import WishList from './WishList';
 
 const StyledButton = styled.div`
     background-color: #7FD1F7;
@@ -27,11 +27,19 @@ const BodyText = styled.div`
     >img {
         max-height: 60px;
     }
+    .siteButton{
+        margin-top: 40px;
+    }
     .parkSite {
         text-decoration: none;
         border: 1px solid black;
         padding: 10px;
         border-radius: 3px;
+    }
+    .locatedIn {
+        font-size: 12px;
+        color: #3B7302;
+        font-weight: bold;
     }
     /* .carrot {
         padding: 10px 5px 10px 0px;
@@ -66,7 +74,7 @@ const Header = styled.div`
     >h1 {
         color: black;
         font-size: 40px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Nunito', sans-serif;
     }
 `
 const PageBody = styled.div`
@@ -116,10 +124,10 @@ export default class Park extends Component {
                     <br></br>
                     <BodyText>
                         <h3>{park.fullName}</h3>
-                        <p>State: {park.states}</p>
+                        <span className='locatedIn'>LOCATED IN: {park.states}</span>
                         {/* <img src="https://i.imgur.com/ezzGmB8.png" /> */}
-                        <p><h4>About:</h4> {park.description}</p>
-                        <p><a className="parkSite" target="_blank" rel="noopener noreferrer" href={park.url}>Official {park.name} website</a></p><br></br>
+                        <h4>About:</h4> {park.description}
+                        <p className="siteButton"><a className="parkSite" target="_blank" rel="noopener noreferrer" href={park.url}>Official {park.name} website</a></p><br></br>
                         {/* <button onClick={() => { this.handleWishListPark() }}>Add this park to Wish List</button> */}
                     </BodyText>
                     <Footer>
@@ -128,7 +136,7 @@ export default class Park extends Component {
                       target="_blank" rel="noopener noreferrer"
                       href="https://www.linkedin.com/in/gouda-clark/"
                       > 
-                        <img className="linkedIn" 
+                        <img className="linkedIn" alt="linkedInLogo"
                         src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
                         />
                        </a> 
